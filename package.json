@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/rskinnerc/portafolio/issues"
   },
-  "homepage": "https://github.com/rskinnerc/portafolio#readme"
+  "homepage": "https://github.com/rskinnerc/portafolio#readme",
+  "devDependencies": {
+    "hint": "^6.1.10"
+  }
 }
