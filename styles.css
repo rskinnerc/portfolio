@@ -171,3 +171,25 @@ h2 {
 .card-caption .primary-btn {
   align-self: center;
 }
+
+.about-me {
+  box-sizing: border-box;
+  padding: 0;
+  background: url(./top-bg.svg) right -40px no-repeat,
+    url(./bottom-bg.svg) left bottom no-repeat;
+}
+
+.about-me .heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-me-description {
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  color: #42526e;
+  line-height: 32px;
+  margin: 0 20px;
+}
