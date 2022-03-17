@@ -95,7 +95,8 @@ h2 {
 .cards-container {
   margin: 60px 0;
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, auto);
   gap: 24px;
 }
 
