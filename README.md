@@ -12,6 +12,22 @@
 
 **This project is the initial presentation of my portfolio as a developer. It was built based on a Microverse's Figma template applying the acquired knowledge about Flexbox, HTML, and CSS through this week.**
 
+## Installation
+
+Clone this repository (you must have [Git Installed](https://github.com/git-guides/install-git))
+
+`git clone https://github.com/rskinnerc/portafolio.git`
+
+Then, move to the newly created folder `portfolio` using this command
+
+`cd portfolio`
+
+To open the project in Visual Studio Code type the following command inside the _portfolio_ folder
+
+`code .`
+
+In order to visualize the project in your browser either open the index.html file directly from the file explorer or consider using a [live server for development ](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+
 ## Authors
 
 👤 **Ronald Skinner**
