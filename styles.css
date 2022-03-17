@@ -16,3 +16,46 @@ body {
   font-family: "Inter";
   font-weight: 600;
 }
+
+.headline {
+  background-image: url("./header-illsutration-mobile.svg");
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  padding: 58px 24px;
+  min-height: 100vh;
+}
+
+.headline .title {
+  font-family: "Inter";
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.naval {
+  color: #172b4d;
+}
+
+.green {
+  color: #36b37f;
+}
+
+.supporting-text {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  margin: 58px 0px;
+}
+
+.social-media {
+  width: 170px;
+  align-self: center;
+}
+
+.more-button {
+  width: 40px;
+  align-self: center;
+  margin-top: 64px;
+}
