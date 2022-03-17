@@ -3,6 +3,17 @@ body {
   margin: 0;
 }
 
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 .toolbar {
   display: flex;
   align-items: center;
@@ -24,6 +35,7 @@ h2 {
 .logo {
   font-weight: 600;
   color: #28352f;
+  text-decoration: none;
 }
 
 .headline {
@@ -31,11 +43,10 @@ h2 {
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  padding: 58px 24px;
-  min-height: 100vh;
+  padding: 58px 24px 22px 24px;
 }
 
-.headline .title {
+.title {
   font-size: 40px;
   font-weight: 700;
   text-align: center;
@@ -68,4 +79,94 @@ h2 {
   width: 40px;
   align-self: center;
   margin-top: 64px;
+}
+
+.works {
+  margin: 0 26px;
+}
+
+.works h1 {
+  height: 125px;
+  background-image: url(./indicator.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.cards-container {
+  margin: 60px 0;
+  display: grid;
+  grid-template-columns: auto;
+  gap: 24px;
+}
+
+.card {
+  border: 1px solid #d0d9d4;
+  background-color: #ebf0ee;
+  border-radius: 8px;
+  height: 474px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.card-caption {
+  box-sizing: border-box;
+  height: 222px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 11px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  text-align: center;
+  color: #3a4a42;
+  font-weight: 600;
+  font-size: 24px;
+  margin: 0;
+}
+
+.card-categories {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 0;
+}
+
+.card-categories li {
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 8px 12px;
+  height: 32px;
+  background-color: #ebf0ee;
+  font-weight: 600;
+  font-size: 12px;
+  color: #3a4a42;
+  cursor: pointer;
+}
+
+.card-categories li:hover {
+  box-shadow: 0px 8px 16px 0px #ebf0ee;
+}
+
+.primary-btn {
+  border: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 12px;
+  background-color: #36b37f;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 500;
+  margin: 18px 0;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  box-shadow: 0px 8px 16px 0px #36b37f3d;
+}
+
+.card-caption .primary-btn {
+  align-self: center;
 }
