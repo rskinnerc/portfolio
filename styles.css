@@ -1,6 +1,6 @@
 body {
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
 }
 
 .toolbar {
@@ -13,7 +13,7 @@ body {
 }
 
 .logo {
-  font-family: "Inter";
+  font-family: Iter, sans-serif;
   font-weight: 600;
 }
 
@@ -27,7 +27,7 @@ body {
 }
 
 .headline .title {
-  font-family: "Inter";
+  font-family: Inter, sans-serif;
   font-size: 40px;
   font-weight: 700;
   text-align: center;
@@ -42,11 +42,11 @@ body {
 }
 
 .supporting-text {
-  font-family: "Inter";
+  font-family: Inter, sans-serif;
   font-weight: 400;
   font-size: 20px;
   text-align: center;
-  margin: 58px 0px;
+  margin: 58px 0;
 }
 
 .social-media {
