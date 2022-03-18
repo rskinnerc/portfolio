@@ -1,6 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   padding: 0;
   margin: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 .toolbar {
@@ -24,6 +39,7 @@ h2 {
 .logo {
   font-weight: 600;
   color: #28352f;
+  text-decoration: none;
 }
 
 .headline {
@@ -31,11 +47,10 @@ h2 {
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  padding: 58px 24px;
-  min-height: 100vh;
+  padding: 58px 24px 22px 24px;
 }
 
-.headline .title {
+.title {
   font-size: 40px;
   font-weight: 700;
   text-align: center;
@@ -68,4 +83,165 @@ h2 {
   width: 40px;
   align-self: center;
   margin-top: 64px;
+}
+
+.works {
+  margin: 0 26px;
+}
+
+.works h2 {
+  height: 125px;
+  box-sizing: content-box;
+  background-image: url(./indicator.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.cards-container {
+  margin: 60px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, auto);
+  gap: 24px;
+}
+
+.card {
+  border: 1px solid #d0d9d4;
+  background-color: #ebf0ee;
+  border-radius: 8px;
+  height: 474px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.card-caption {
+  height: 222px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 11px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  text-align: center;
+  color: #3a4a42;
+  font-weight: 600;
+  font-size: 24px;
+  margin: 0;
+}
+
+.card-categories {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 0;
+}
+
+.card-categories li {
+  border-radius: 4px;
+  padding: 8px 12px;
+  height: 32px;
+  background-color: #ebf0ee;
+  font-weight: 600;
+  font-size: 12px;
+  color: #3a4a42;
+  cursor: pointer;
+}
+
+.skill-tags li {
+  height: 40px;
+  border-radius: 8px;
+  padding: 12px;
+  background-color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  color: #36b37e;
+  cursor: pointer;
+  margin: 3px;
+}
+
+.card-categories li:hover {
+  box-shadow: 0 8px 16px 0 #ebf0ee;
+}
+
+.primary-btn {
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  padding: 12px;
+  background-color: #36b37f;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 500;
+  margin: 18px 0;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  box-shadow: 0 8px 16px 0 #36b37f3d;
+}
+
+.card-caption .primary-btn {
+  align-self: center;
+}
+
+.about-me {
+  padding: 0;
+}
+
+.about-me .heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(./top-bg.svg), url(./bottom-bg.svg);
+  background-position: right -40px, left bottom;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.about-me-description {
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  color: #42526e;
+  line-height: 32px;
+  margin: 0 20px;
+}
+
+.skills {
+  padding: 0;
+  margin: 48px 24px;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 352px;
+  border: 1px solid #c1c7d0;
+  background: #ebf0ee;
+  border-radius: 8px;
+  margin: 12px 0;
+}
+
+.skill-card figure {
+  margin-top: 20px;
+}
+
+.skill-card h3 {
+  font-weight: 600;
+  font-size: 24px;
+  color: #344563;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: stretch;
+  justify-content: center;
+  margin: 0 28px;
+}
+
+.skill-tags li:hover {
+  box-shadow: 0 8px 16px 0 #fff;
 }
