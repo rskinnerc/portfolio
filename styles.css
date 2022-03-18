@@ -117,7 +117,7 @@ h2 {
 
 .card-caption {
   height: 222px;
-  background-color: #ffffff;
+  background-color: #fff;
   border-radius: 8px;
   padding: 11px;
   display: flex;
@@ -149,13 +149,25 @@ h2 {
   cursor: pointer;
 }
 
+.skill-tags li {
+  height: 40px;
+  border-radius: 8px;
+  padding: 12px;
+  background-color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  color: #36b37e;
+  cursor: pointer;
+  margin: 3px;
+}
+
 .card-categories li:hover {
-  box-shadow: 0px 8px 16px 0px #ebf0ee;
+  box-shadow: 0 8px 16px 0 #ebf0ee;
 }
 
 .primary-btn {
   border: none;
-  color: #ffffff;
+  color: #fff;
   border-radius: 4px;
   padding: 12px;
   background-color: #36b37f;
@@ -167,7 +179,7 @@ h2 {
 }
 
 .primary-btn:hover {
-  box-shadow: 0px 8px 16px 0px #36b37f3d;
+  box-shadow: 0 8px 16px 0 #36b37f3d;
 }
 
 .card-caption .primary-btn {
@@ -182,8 +194,9 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url(./top-bg.svg) right -40px no-repeat,
-    url(./bottom-bg.svg) left bottom no-repeat;
+  background-image: url(./top-bg.svg), url(./bottom-bg.svg);
+  background-position: right -40px, left bottom;
+  background-repeat: no-repeat, no-repeat;
 }
 
 .about-me-description {
@@ -229,18 +242,6 @@ h2 {
   margin: 0 28px;
 }
 
-.skill-tags li {
-  height: 40px;
-  border-radius: 8px;
-  padding: 12px;
-  background-color: #ffffff;
-  font-size: 12px;
-  font-weight: 600;
-  color: #36b37e;
-  cursor: pointer;
-  margin: 3px;
-}
-
 .skill-tags li:hover {
-  box-shadow: 0px 8px 16px 0px #ffffff;
+  box-shadow: 0 8px 16px 0 #fff;
 }
