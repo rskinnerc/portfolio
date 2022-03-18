@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -85,8 +89,9 @@ h2 {
   margin: 0 26px;
 }
 
-.works h1 {
+.works h2 {
   height: 125px;
+  box-sizing: content-box;
   background-image: url(./indicator.png);
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -111,7 +116,6 @@ h2 {
 }
 
 .card-caption {
-  box-sizing: border-box;
   height: 222px;
   background-color: #ffffff;
   border-radius: 8px;
@@ -135,7 +139,6 @@ h2 {
 }
 
 .card-categories li {
-  box-sizing: border-box;
   border-radius: 4px;
   padding: 8px 12px;
   height: 32px;
@@ -152,7 +155,6 @@ h2 {
 
 .primary-btn {
   border: none;
-  box-sizing: border-box;
   color: #ffffff;
   border-radius: 4px;
   padding: 12px;
@@ -173,16 +175,15 @@ h2 {
 }
 
 .about-me {
-  box-sizing: border-box;
   padding: 0;
-  background: url(./top-bg.svg) right -40px no-repeat,
-    url(./bottom-bg.svg) left bottom no-repeat;
 }
 
 .about-me .heading {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: url(./top-bg.svg) right -40px no-repeat,
+    url(./bottom-bg.svg) left bottom no-repeat;
 }
 
 .about-me-description {
@@ -192,4 +193,54 @@ h2 {
   color: #42526e;
   line-height: 32px;
   margin: 0 20px;
+}
+
+.skills {
+  padding: 0;
+  margin: 48px 24px;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 352px;
+  border: 1px solid #c1c7d0;
+  background: #ebf0ee;
+  border-radius: 8px;
+  margin: 12px 0;
+}
+
+.skill-card figure {
+  margin-top: 20px;
+}
+
+.skill-card h3 {
+  font-weight: 600;
+  font-size: 24px;
+  color: #344563;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: stretch;
+  justify-content: center;
+  margin: 0 28px;
+}
+
+.skill-tags li {
+  height: 40px;
+  border-radius: 8px;
+  padding: 12px;
+  background-color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  color: #36b37e;
+  cursor: pointer;
+  margin: 3px;
+}
+
+.skill-tags li:hover {
+  box-shadow: 0px 8px 16px 0px #ffffff;
 }
