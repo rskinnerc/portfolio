@@ -245,3 +245,16 @@ h2 {
 .skill-tags li:hover {
   box-shadow: 0 8px 16px 0 #fff;
 }
+
+footer h2 {
+  padding: 0 24px;
+  margin: 0;
+}
+
+.form-container {
+  box-sizing: border-box;
+  margin: 58px 0;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+}
