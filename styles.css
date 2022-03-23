@@ -227,7 +227,7 @@ footer h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 352px;
+  min-height: fit-content;
   border: 1px solid #c1c7d0;
   background: #ebf0ee;
   border-radius: 8px;
@@ -249,7 +249,7 @@ footer h2 {
   flex-wrap: wrap;
   align-self: stretch;
   justify-content: center;
-  margin: 0 28px;
+  margin: 28px;
 }
 
 .skill-tags li:hover {
@@ -391,6 +391,27 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     gap: 5px;
+  }
+
+  .about-me .heading {
+    background-image: url(./illustration-about-me-1-desktop.svg),
+      url(./illustration-about-me-2-desktop.svg);
+    background-position: right top, left bottom;
+    background-repeat: no-repeat, no-repeat;
+    padding-top: 90px;
+  }
+
+  .about-me-description {
+    margin: 24px auto 0 auto;
+    width: 55%;
+  }
+
+  .skills {
+    width: 84%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
   }
 }
 
