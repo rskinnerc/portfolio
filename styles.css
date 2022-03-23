@@ -49,6 +49,7 @@ h2 {
 .headline {
   background-image: url("./header-illsutration-mobile.svg");
   background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   flex-direction: column;
   padding: 58px 24px 22px 24px;
@@ -352,5 +353,18 @@ footer {
     font-size: 15px;
     font-weight: 600;
     color: #344563;
+  }
+
+  .headline {
+    background-image: url("./header-illustration-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    padding: 18% 0 30% 0;
+  }
+
+  .supporting-text {
+    width: 55%;
+    margin: 24px auto;
   }
 }
