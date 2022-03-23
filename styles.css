@@ -126,7 +126,7 @@ footer h2 {
 }
 
 .card-caption {
-  height: 222px;
+  height: fit-content;
   background-color: #fff;
   border-radius: 8px;
   padding: 11px;
@@ -330,6 +330,10 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
+  * {
+    box-sizing: border-box;
+  }
+
   .menu-icon,
   .logo {
     display: none;
@@ -366,5 +370,33 @@ footer {
   .supporting-text {
     width: 55%;
     margin: 24px auto;
+  }
+
+  .works {
+    margin: 102px auto;
+    width: 84%;
+  }
+
+  .works h2 {
+    height: auto;
+    background-image: none;
+  }
+
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+
+  .card-categories {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .cards-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
   }
 }
