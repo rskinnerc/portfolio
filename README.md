@@ -35,6 +35,14 @@ In order to visualize the project in your browser either open the index.html fil
 - GitHub: [@rskinnerc](https://github.com/rskinnerc)
 - Twitter: [@XSkinner](https://twitter.com/XSkinner)
 
+## Colaborators
+
+👤 **Mariana Revilla Lérida**
+
+- GitHub: [@marurevi](https://github.com/marurevi)
+- Twitter: [@MaruRevilla](https://twitter.com/MaruRevilla)
+- LinkedIn: [Mariana-Revilla-Lérida](https://linkedin.com/in/mariana-revilla-lérida-a12aba143)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!

@@ -89,6 +89,11 @@ h2 {
   margin: 0 26px;
 }
 
+footer h2 {
+  padding: 0 24px;
+  margin: 0;
+}
+
 .works h2 {
   height: 125px;
   box-sizing: content-box;
@@ -244,4 +249,77 @@ h2 {
 
 .skill-tags li:hover {
   box-shadow: 0 8px 16px 0 #fff;
+}
+
+footer {
+  background-image: url(./illustration-contact-form.svg);
+  background-position: right 68%;
+  background-repeat: no-repeat;
+}
+
+.form-container {
+  box-sizing: border-box;
+  margin: 58px 0 44px 0;
+  padding: 0 24px;
+}
+
+.form-container input {
+  border-radius: 4px;
+  border: solid 1px #d0d9d4;
+  font-size: 15px;
+  color: #6b778c;
+  font-weight: 400;
+  height: 48px;
+  width: 100%;
+  margin-bottom: 24px;
+  padding: 0 18px;
+}
+
+.form-container textarea {
+  border-radius: 4px;
+  border: solid 1px #d0d9d4;
+  font-size: 15px;
+  color: #6b778c;
+  font-weight: 400;
+  width: 100%;
+  margin-bottom: 24px;
+  padding: 12px;
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+  border: solid 1px #60c095;
+  color: #091e42;
+  outline: none;
+}
+
+.form-container ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-social p {
+  font-size: 20px;
+  color: #42526e;
+  font-weight: 400;
+  margin-bottom: 323px;
+}
+
+.home-indicator {
+  height: 5px;
+  background: #0d151e;
+  border-radius: 10px;
+  width: 33%;
+  margin-bottom: 8px;
 }
