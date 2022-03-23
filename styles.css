@@ -27,6 +27,10 @@ ul {
   padding-right: 26px;
 }
 
+.toolbar ul {
+  display: none;
+}
+
 h1,
 h2 {
   margin: 5px 0;
@@ -322,4 +326,31 @@ footer {
   border-radius: 10px;
   width: 33%;
   margin-bottom: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-icon,
+  .logo {
+    display: none;
+  }
+
+  .toolbar {
+    position: absolute;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .toolbar ul {
+    display: flex;
+    gap: 32px;
+  }
+
+  .toolbar a,
+  .toolbar a:active,
+  .toolbar a:visited {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    color: #344563;
+  }
 }
