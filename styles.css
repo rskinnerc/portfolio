@@ -324,6 +324,10 @@ footer {
   margin-bottom: 8px;
 }
 
+hr.hr-bottom-line {
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
   * {
     box-sizing: border-box;
@@ -444,8 +448,15 @@ footer {
 
   footer .footer-social {
     grid-area: social;
-    padding: 24px 0;
+    padding: 18px 0;
     margin-top: 125px;
+  }
+
+  hr.hr-bottom-line {
+    display: block;
+    border: 1px solid #dfe1e6;
+    position: relative;
+    bottom: 56px;
   }
 
   footer .footer-social .social-media ~ * {
