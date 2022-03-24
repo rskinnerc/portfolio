@@ -410,6 +410,11 @@ footer {
   }
 
   footer {
+    background-image: url(./contact-form-illustratoin-3-desktop.svg),
+      url(./illustration-1-contact-form-desktop.svg),
+      url(./illustration-2-contact-form-desktop.svg);
+    background-position: right 75%, left 85%, 20% 80%;
+    background-size: auto;
     padding: 0 8%;
     margin: 0 auto;
     width: 100%;
@@ -440,6 +445,7 @@ footer {
   footer .footer-social {
     grid-area: social;
     padding: 24px 0;
+    margin-top: 125px;
   }
 
   footer .footer-social .social-media ~ * {
