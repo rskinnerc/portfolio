@@ -94,11 +94,6 @@ h2 {
   margin: 0 26px;
 }
 
-footer h2 {
-  padding: 0 24px;
-  margin: 0;
-}
-
 .works h2 {
   height: 125px;
   box-sizing: content-box;
@@ -260,12 +255,12 @@ footer {
   background-image: url(./illustration-contact-form.svg);
   background-position: right 68%;
   background-repeat: no-repeat;
+  padding: 0 24px;
 }
 
 .form-container {
   box-sizing: border-box;
   margin: 58px 0 44px 0;
-  padding: 0 24px;
 }
 
 .form-container input {
@@ -412,6 +407,43 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
+  }
+
+  footer {
+    padding: 0 8%;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40% 58%;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "title form"
+      "social social";
+    gap: 2%;
+    align-items: center;
+  }
+
+  footer .title {
+    grid-area: title;
+    font-size: 30px;
+  }
+
+  .form-container {
+    grid-area: form;
+    margin-top: 100px;
+  }
+
+  .form-container .button-container {
+    justify-content: start;
+  }
+
+  footer .footer-social {
+    grid-area: social;
+    padding: 24px 0;
+  }
+
+  footer .footer-social .social-media ~ * {
+    display: none;
   }
 }
 
