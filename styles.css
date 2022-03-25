@@ -333,7 +333,7 @@ hr.hr-bottom-line {
     box-sizing: border-box;
     transition: box-shadow 0.5s;
   }
-  
+
   .primary-btn:hover {
     transform: scale(1.2);
     transition: transform 0.7s ease-in-out;
@@ -372,6 +372,21 @@ hr.hr-bottom-line {
     padding: 18% 0 30% 0;
   }
 
+  .headline .title {
+    animation-duration: 3s;
+    animation-delay: 0.3s;
+    animation-name: scaleout;
+  }
+
+  @keyframes scaleout {
+    from {
+      transform: scale(1.7);
+    }
+
+    to {
+      transform: scale(1);
+    }
+  }
   .supporting-text {
     width: 55%;
     margin: 24px auto;
