@@ -333,6 +333,11 @@ hr.hr-bottom-line {
     box-sizing: border-box;
     transition: box-shadow 0.5s;
   }
+  
+  .primary-btn:hover {
+    transform: scale(1.2);
+    transition: transform 0.7s ease-in-out;
+  }
 
   .menu-icon,
   .logo {
