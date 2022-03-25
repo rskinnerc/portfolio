@@ -167,7 +167,7 @@ h2 {
 }
 
 .card-categories li:hover {
-  box-shadow: 0 8px 16px 0 #ebf0ee;
+  box-shadow: 0 10px 20px 0 #ebf0ee;
 }
 
 .primary-btn {
@@ -184,7 +184,7 @@ h2 {
 }
 
 .primary-btn:hover {
-  box-shadow: 0 8px 16px 0 #36b37f3d;
+  box-shadow: 0 8px 10px 0 #36b37f3d;
 }
 
 .card-caption .primary-btn {
@@ -248,7 +248,7 @@ h2 {
 }
 
 .skill-tags li:hover {
-  box-shadow: 0 8px 16px 0 #fff;
+  box-shadow: 0 8px 10px 0 #fff;
 }
 
 footer {
@@ -331,6 +331,7 @@ hr.hr-bottom-line {
 @media screen and (min-width: 768px) {
   * {
     box-sizing: border-box;
+    transition: box-shadow 0.5s;
   }
 
   .menu-icon,
@@ -393,8 +394,7 @@ hr.hr-bottom-line {
   }
 
   .about-me .heading {
-    background-image:
-      url(./illustration-about-me-1-desktop.svg),
+    background-image: url(./illustration-about-me-1-desktop.svg),
       url(./illustration-about-me-2-desktop.svg);
     background-position: right top, left bottom;
     background-repeat: no-repeat, no-repeat;
@@ -415,8 +415,7 @@ hr.hr-bottom-line {
   }
 
   footer {
-    background-image:
-      url(./contact-form-illustratoin-3-desktop.svg),
+    background-image: url(./contact-form-illustratoin-3-desktop.svg),
       url(./illustration-1-contact-form-desktop.svg),
       url(./illustration-2-contact-form-desktop.svg);
     background-position: right 75%, left 85%, 20% 80%;
