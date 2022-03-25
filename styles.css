@@ -167,7 +167,7 @@ h2 {
 }
 
 .card-categories li:hover {
-  box-shadow: 0 8px 16px 0 #ebf0ee;
+  box-shadow: 0 10px 20px 0 #ebf0ee;
 }
 
 .primary-btn {
@@ -184,7 +184,7 @@ h2 {
 }
 
 .primary-btn:hover {
-  box-shadow: 0 8px 16px 0 #36b37f3d;
+  box-shadow: 0 8px 10px 0 #36b37f3d;
 }
 
 .card-caption .primary-btn {
@@ -248,7 +248,7 @@ h2 {
 }
 
 .skill-tags li:hover {
-  box-shadow: 0 8px 16px 0 #fff;
+  box-shadow: 0 8px 10px 0 #fff;
 }
 
 footer {
@@ -331,6 +331,12 @@ hr.hr-bottom-line {
 @media screen and (min-width: 768px) {
   * {
     box-sizing: border-box;
+    transition: box-shadow 0.5s;
+  }
+
+  .primary-btn:hover {
+    transform: scale(1.2);
+    transition: transform 0.7s ease-in-out;
   }
 
   .menu-icon,
@@ -366,9 +372,44 @@ hr.hr-bottom-line {
     padding: 18% 0 30% 0;
   }
 
+  footer .title {
+    grid-area: title;
+    font-size: 30px;
+  }
+
+  .headline .title {
+    animation-duration: 3s;
+    animation-name: scaleout;
+  }
+
+  @keyframes scaleout {
+    from {
+      transform: scale(1.7);
+    }
+
+    to {
+      transform: scale(1);
+    }
+  }
+
   .supporting-text {
     width: 55%;
     margin: 24px auto;
+  }
+
+  .headline .supporting-text {
+    animation-duration: 4s;
+    animation-name: appearText;
+  }
+
+  @keyframes appearText {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
   }
 
   .works {
@@ -432,11 +473,6 @@ hr.hr-bottom-line {
       "social social";
     gap: 2%;
     align-items: center;
-  }
-
-  footer .title {
-    grid-area: title;
-    font-size: 30px;
   }
 
   .form-container {
