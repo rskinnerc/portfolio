@@ -372,6 +372,11 @@ hr.hr-bottom-line {
     padding: 18% 0 30% 0;
   }
 
+  footer .title {
+    grid-area: title;
+    font-size: 30px;
+  }
+
   .headline .title {
     animation-duration: 3s;
     animation-name: scaleout;
@@ -387,6 +392,11 @@ hr.hr-bottom-line {
     }
   }
 
+  .supporting-text {
+    width: 55%;
+    margin: 24px auto;
+  }
+
   .headline .supporting-text {
     animation-duration: 4s;
     animation-name: appearText;
@@ -400,11 +410,6 @@ hr.hr-bottom-line {
     to {
       opacity: 1;
     }
-  }
-
-  .supporting-text {
-    width: 55%;
-    margin: 24px auto;
   }
 
   .works {
@@ -429,7 +434,8 @@ hr.hr-bottom-line {
   }
 
   .about-me .heading {
-    background-image: url(./illustration-about-me-1-desktop.svg),
+    background-image:
+      url(./illustration-about-me-1-desktop.svg),
       url(./illustration-about-me-2-desktop.svg);
     background-position: right top, left bottom;
     background-repeat: no-repeat, no-repeat;
@@ -450,7 +456,8 @@ hr.hr-bottom-line {
   }
 
   footer {
-    background-image: url(./contact-form-illustratoin-3-desktop.svg),
+    background-image:
+      url(./contact-form-illustratoin-3-desktop.svg),
       url(./illustration-1-contact-form-desktop.svg),
       url(./illustration-2-contact-form-desktop.svg);
     background-position: right 75%, left 85%, 20% 80%;
@@ -466,11 +473,6 @@ hr.hr-bottom-line {
       "social social";
     gap: 2%;
     align-items: center;
-  }
-
-  footer .title {
-    grid-area: title;
-    font-size: 30px;
   }
 
   .form-container {
