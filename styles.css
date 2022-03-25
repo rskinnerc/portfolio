@@ -374,7 +374,6 @@ hr.hr-bottom-line {
 
   .headline .title {
     animation-duration: 3s;
-    animation-delay: 0.3s;
     animation-name: scaleout;
   }
 
@@ -387,6 +386,22 @@ hr.hr-bottom-line {
       transform: scale(1);
     }
   }
+
+  .headline .supporting-text {
+    animation-duration: 4s;
+    animation-name: appearText;
+  }
+
+  @keyframes appearText {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
   .supporting-text {
     width: 55%;
     margin: 24px auto;
