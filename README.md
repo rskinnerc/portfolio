@@ -1,12 +1,16 @@
-# Portafolio
+# Portfolio
 
-> My portafolio project based on Microverse's figma templates
+> My portfolio project based on Microverse's figma templates
 
 ## Built With
 
 - HTML
 - CSS
 - Code validation using Webhint, Stylelint and Lighthouse
+
+## Live Demo (if available)
+
+[Live Demo Link](https://rskinnerc.github.io/portfolio/)
 
 ## Getting Started
 
@@ -16,7 +20,7 @@
 
 Clone this repository (you must have [Git Installed](https://github.com/git-guides/install-git))
 
-`git clone https://github.com/rskinnerc/portafolio.git`
+`git clone https://github.com/rskinnerc/portfolio.git`
 
 Then, move to the newly created folder `portfolio` using this command
 
