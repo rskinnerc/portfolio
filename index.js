@@ -1,12 +1,13 @@
 const menuBtn = document.querySelector('#menu-btn');
 const menuNav = document.querySelector('#menu-nav');
-const closeMenuBtn = document.querySelector('#close-menu')
-const navLinks = document.querySelectorAll('#headline #about-me #contact');
+const navLinks = document.querySelectorAll('.toolbar ul > li');
 
 menuBtn.addEventListener('click', () => {
   menuNav.classList.toggle("menu-hidden")
 })
 
-closeMenuBtn.addEventListener("click", () => {
-  menuNav.classList.toggle("menu-hidden")
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    menuNav.classList.toggle("menu-hidden")
+  })
 })
