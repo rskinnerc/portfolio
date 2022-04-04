@@ -44,6 +44,15 @@ ul {
   padding: 28px;
 }
 
+.menu-icon {
+  cursor: pointer;
+}
+
+#close-menu {
+  align-self: end;
+  cursor: pointer;
+}
+
 .toolbar ul a,
 .toolbar ul a:active,
 .toolbar ul a:visited {
@@ -389,6 +398,10 @@ hr.hr-bottom-line {
   .toolbar ul a:active,
   .toolbar ul a:visited {
     font-size: 15px;
+  }
+
+  #close-menu {
+    display: none;
   }
 
   .headline {
