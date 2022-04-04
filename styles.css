@@ -27,8 +27,39 @@ ul {
   padding-right: 26px;
 }
 
-.toolbar ul {
+.toolbar .menu-hidden {
   display: none;
+}
+
+.toolbar ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  padding: 28px;
+}
+
+.menu-icon {
+  cursor: pointer;
+}
+
+#close-menu {
+  align-self: end;
+  cursor: pointer;
+}
+
+.toolbar ul a,
+.toolbar ul a:active,
+.toolbar ul a:visited {
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: 600;
+  color: #344563;
 }
 
 h1,
@@ -350,18 +381,27 @@ hr.hr-bottom-line {
     justify-content: center;
   }
 
-  .toolbar ul {
+  .toolbar .menu-hidden {
     display: flex;
-    gap: 32px;
   }
 
-  .toolbar a,
-  .toolbar a:active,
-  .toolbar a:visited {
-    text-decoration: none;
+  .toolbar ul {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    height: auto;
+    position: static;
+    background-color: transparent;
+  }
+
+  .toolbar ul a,
+  .toolbar ul a:active,
+  .toolbar ul a:visited {
     font-size: 15px;
-    font-weight: 600;
-    color: #344563;
+  }
+
+  #close-menu {
+    display: none;
   }
 
   .headline {
