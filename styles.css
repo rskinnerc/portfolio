@@ -403,6 +403,14 @@ hr.hr-bottom-line {
   width: 100%;
 }
 
+#popup .close-popup {
+  position: absolute;
+  top: 2%;
+  right: 9%;
+  width: 8%;
+  height: 8%;
+  cursor: pointer;
+}
 
 @media screen and (min-width: 768px) {
   * {

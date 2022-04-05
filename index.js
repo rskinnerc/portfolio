@@ -4,6 +4,7 @@ const navLinks = document.querySelectorAll('.toolbar ul > li');
 const recentWorksListItem = document.querySelector('#recent-works li');
 const recentWorksContainer = document.querySelector('#recent-works');
 const popup = document.querySelector('#popup');
+const closePopupBtn = popup.querySelector('#popup .close-popup');
 
 menuBtn.addEventListener('click', () => {
   menuNav.classList.toggle('menu-hidden');
@@ -126,9 +127,9 @@ recentWorksContainer.addEventListener('click', (event) => {
     const project = event.target.id.split('-');
     const popupTitle = popup.querySelector('.popup-title');
     const popupDescription = popup.querySelector('#popup p');
-    const popupImg = popup.querySelector('#popup img');
+    const popupImg = popup.querySelector('#featured_img');
     const popupTechnologies = popup.querySelector('#popup ul');
-
+    popupTechnologies.innerHTML = '';
     RECENT_WORKS[project[1]].technologies.forEach((technology) => {
       const techItem = document.createElement('li');
       techItem.innerHTML = technology;
@@ -141,4 +142,8 @@ recentWorksContainer.addEventListener('click', (event) => {
     popupTitle.innerHTML = RECENT_WORKS[project[1]].title;
     popup.classList.toggle('popup-hidden');
   }
+});
+
+closePopupBtn.addEventListener('click', () => {
+  popup.classList.toggle('popup-hidden');
 });
