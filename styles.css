@@ -401,6 +401,10 @@ hr.hr-bottom-line {
 
 #popup .popup-buttons a {
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
 }
 
 #popup .close-popup {
