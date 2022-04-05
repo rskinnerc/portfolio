@@ -374,13 +374,12 @@ hr.hr-bottom-line {
   left: 0;
   right: 0;
   z-index: 100;
-  background-color: #C1C7D0;
-  backdrop-filter: blur(8px);
+  background-color:rgba(193, 199, 208, 0.8);
+  backdrop-filter: blur(2px);
 }
 
 #popup .inner-popup {
   position: relative;
-  opacity: 1 !important;
   margin: 20px 16px;
   background-color: #fff;
   display: flex;
