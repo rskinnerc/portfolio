@@ -376,6 +376,7 @@ hr.hr-bottom-line {
   z-index: 100;
   background-color:rgba(193, 199, 208, 0.8);
   backdrop-filter: blur(2px);
+  overflow: scroll;
 }
 
 #popup .inner-popup {
