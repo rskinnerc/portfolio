@@ -359,6 +359,51 @@ hr.hr-bottom-line {
   display: none;
 }
 
+.popup-title {
+  font-size: 32px;
+}
+
+.popup-hidden {
+  visibility: hidden;
+}
+
+#popup {
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: #C1C7D0;
+  backdrop-filter: blur(8px);
+}
+
+#popup .inner-popup {
+  position: relative;
+  opacity: 1 !important;
+  margin: 20px 16px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+#popup p {
+  font-size: 16px;
+}
+
+#popup .popup-buttons {
+  display: flex;
+  justify-content: space-around;
+  gap: 12px;
+}
+
+#popup .popup-buttons a {
+  width: 100%;
+}
+
+
 @media screen and (min-width: 768px) {
   * {
     box-sizing: border-box;

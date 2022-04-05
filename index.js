@@ -2,6 +2,8 @@ const menuBtn = document.querySelector('#menu-btn');
 const menuNav = document.querySelector('#menu-nav');
 const navLinks = document.querySelectorAll('.toolbar ul > li');
 const recentWorksListItem = document.querySelector('#recent-works li');
+const recentWorksContainer = document.querySelector('#recent-works');
+const popup = document.querySelector('#popup');
 
 menuBtn.addEventListener('click', () => {
   menuNav.classList.toggle('menu-hidden');
@@ -115,3 +117,9 @@ for (let i = 0; i < RECENT_WORKS.length; i += 1) {
 }
 
 recentWorksListItem.remove();
+
+recentWorksContainer.addEventListener('click', (event) => {
+  if (event.target.classList.contains('primary-btn')) {
+    popup.classList.toggle('popup-hidden');
+  }
+});
