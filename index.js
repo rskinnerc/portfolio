@@ -163,6 +163,7 @@ closePopupBtns.forEach((btn) => {
 contactForm.addEventListener('submit', (event) => {
   event.preventDefault();
   errorContainer.classList.add('hidden');
+  contactForm.email.classList.remove('invalid');
   errorContainer.textContent = '';
 
   if (!contactForm.email.validity.valid) {
@@ -174,6 +175,7 @@ contactForm.addEventListener('submit', (event) => {
       errorContainer.textContent = 'Please use only lowercase characters.';
     }
     errorContainer.classList.remove('hidden');
+    contactForm.email.classList.add('invalid');
   } else {
     contactForm.submit();
   }
