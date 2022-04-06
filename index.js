@@ -163,20 +163,26 @@ closePopupBtns.forEach((btn) => {
 contactForm.addEventListener('submit', (event) => {
   event.preventDefault();
   errorContainer.classList.add('hidden');
-  contactForm.email.classList.remove('invalid');
   errorContainer.textContent = '';
 
-  if (!contactForm.email.validity.valid) {
-    if (contactForm.email.validity.valueMissing) {
-      errorContainer.textContent = 'This field is required.';
-    } else if (contactForm.email.validity.typeMismatch) {
-      errorContainer.textContent = 'Please provide a valid e-mail address.';
-    } else if (contactForm.email.validity.patternMismatch) {
-      errorContainer.textContent = 'Please use only lowercase characters.';
+  Array.from(contactForm.elements).forEach((element) => {
+    element.classList.remove('invalid');
+    if (!element.validity.valid) {
+      if (element.validity.valueMissing) {
+        errorContainer.textContent = `The field ${element.name} is required.`;
+      } else if (element.validity.typeMismatch) {
+        errorContainer.textContent = 'Please provide a valid e-mail address.';
+      } else if (element.validity.patternMismatch) {
+        errorContainer.textContent = 'Please use only lowercase characters.';
+      } else if (element.validity.tooLong) {
+        errorContainer.textContent = `The field ${element.name} exceeded the max character count (${element.getAttribute('maxlength')}).`;
+      }
+      errorContainer.classList.remove('hidden');
+      element.classList.add('invalid');
     }
-    errorContainer.classList.remove('hidden');
-    contactForm.email.classList.add('invalid');
-  } else {
+  });
+
+  if (contactForm.reportValidity()) {
     contactForm.submit();
   }
 });

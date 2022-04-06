@@ -344,7 +344,8 @@ footer {
   color: #ff6163;
 }
 
-input.invalid {
+input.invalid,
+.form-container textarea.invalid {
   border: solid 1px #ff6163;
 }
 
