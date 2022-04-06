@@ -331,7 +331,20 @@ footer {
 
 .button-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-error {
+  background: #FFE7E8;
+  border: 1px solid #FF6163;
+  border-radius: 4px;
+  padding: 16px;
+  align-self: stretch;
+}
+
+.hidden {
+  display: none;
 }
 
 .footer-social {
@@ -583,10 +596,6 @@ hr.hr-bottom-line {
   .form-container {
     grid-area: form;
     margin-top: 160px;
-  }
-
-  .form-container .button-container {
-    justify-content: start;
   }
 
   footer .footer-social {

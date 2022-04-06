@@ -113,7 +113,7 @@
     <h2 class="title inter naval">I'm always interested in hearing about new projects, so if you'd like to chat please
       get in
       touch.</h2>
-    <form action="https://formspree.io/f/xjvloqrk" method="POST" class="form-container">
+    <form action="https://formspree.io/f/xjvloqrk" method="POST" class="form-container" name="contact-form">
       <ul>
         <li>
           <input type="text" id="name" class="inter" aria-label="Name" placeholder="Full name" maxlength="30"
@@ -128,6 +128,7 @@
             placeholder="Enter text here ..." maxlength="500" required></textarea>
         </li>
         <li class="button-container">
+          <div class="form-error hidden" id="form-error"></div>
           <button type="submit" class="primary-btn inter">Get in touch</button>
         </li>
       </ul>
