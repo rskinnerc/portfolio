@@ -359,6 +359,71 @@ hr.hr-bottom-line {
   display: none;
 }
 
+.popup-title {
+  font-size: 32px;
+}
+
+.popup-hidden {
+  visibility: hidden;
+}
+
+#popup {
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgba(193, 199, 208, 0.8);
+  backdrop-filter: blur(2px);
+  overflow: scroll;
+}
+
+#popup .inner-popup {
+  position: relative;
+  margin: 20px 16px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+#popup p {
+  font-size: 16px;
+}
+
+#popup picture * {
+  width: 100%;
+}
+
+#popup .popup-buttons {
+  display: flex;
+  justify-content: space-around;
+  gap: 12px;
+}
+
+#popup .popup-buttons a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+#popup .close-popup {
+  position: absolute;
+  top: 2%;
+  right: 9%;
+  width: 8%;
+  height: 8%;
+  cursor: pointer;
+}
+
+#popup .close-popup-desktop {
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
   * {
     box-sizing: border-box;
@@ -366,7 +431,7 @@ hr.hr-bottom-line {
   }
 
   .primary-btn:hover {
-    transform: scale(1.2);
+    transform: scale(1.05);
     transition: transform 0.7s ease-in-out;
   }
 
@@ -539,6 +604,60 @@ hr.hr-bottom-line {
 
   footer .footer-social .social-media ~ * {
     display: none;
+  }
+
+  #popup .inner-popup {
+    position: relative;
+    width: 60%;
+    margin: 4rem auto;
+    border-radius: 8px;
+    padding: 78px 24px 24px;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: 60% 10% 10% 10%;
+    grid-template-areas:
+      "picture picture picture picture"
+      "title title buttons buttons"
+      "techs techs techs ."
+      "p p p p";
+    justify-items: stretch;
+    row-gap: 6px;
+  }
+
+  #popup .close-popup {
+    display: none;
+  }
+
+  #popup .close-popup-desktop {
+    display: block;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    cursor: pointer;
+  }
+
+  .inner-popup picture {
+    overflow: hidden;
+    border-radius: 8px;
+    grid-area: picture;
+  }
+
+  .inner-popup .popup-title {
+    grid-area: title;
+    align-self: center;
+  }
+
+  .inner-popup p {
+    grid-area: p;
+  }
+
+  .inner-popup .popup-buttons {
+    grid-area: buttons;
+  }
+
+  .inner-popup .popup-technologies {
+    grid-area: techs;
+    justify-self: start;
   }
 }
 
