@@ -113,7 +113,7 @@
     <h2 class="title inter naval">I'm always interested in hearing about new projects, so if you'd like to chat please
       get in
       touch.</h2>
-    <form action="https://formspree.io/f/xjvloqrk" method="POST" class="form-container" name="contact-form">
+    <form action="https://formspree.io/f/xjvloqrk" method="POST" class="form-container" name="contact-form" novalidate>
       <ul>
         <li>
           <input type="text" id="name" class="inter" aria-label="Name" placeholder="Full name" maxlength="30"
@@ -121,14 +121,14 @@
         </li>
         <li>
           <input type="email" id="email" class="inter" aria-label="Email" placeholder="Email address" name="email"
-            required>
+            required pattern="[^A-Z]+">
         </li>
         <li>
           <textarea name="message" id="message" cols="30" aria-label="Message" rows="5" class="inter"
             placeholder="Enter text here ..." maxlength="500" required></textarea>
         </li>
         <li class="button-container">
-          <div class="form-error hidden" id="form-error"></div>
+          <div class="form-error hidden inter" id="form-error"></div>
           <button type="submit" class="primary-btn inter">Get in touch</button>
         </li>
       </ul>

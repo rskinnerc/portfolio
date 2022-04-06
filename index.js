@@ -5,6 +5,8 @@ const recentWorksListItem = document.querySelector('#recent-works li');
 const recentWorksContainer = document.querySelector('#recent-works');
 const popup = document.querySelector('#popup');
 const closePopupBtns = popup.querySelectorAll('#popup .close-popup, #popup .close-popup-desktop');
+const contactForm = document.forms['contact-form'];
+const errorContainer = document.getElementById('form-error');
 
 menuBtn.addEventListener('click', () => {
   menuNav.classList.toggle('menu-hidden');
@@ -156,4 +158,23 @@ closePopupBtns.forEach((btn) => {
   btn.addEventListener('click', () => {
     popup.classList.toggle('popup-hidden');
   });
+});
+
+contactForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  errorContainer.classList.add('hidden');
+  errorContainer.textContent = '';
+
+  if (!contactForm.email.validity.valid) {
+    if (contactForm.email.validity.valueMissing) {
+      errorContainer.textContent = 'This field is required.';
+    } else if (contactForm.email.validity.typeMismatch) {
+      errorContainer.textContent = 'Please provide a valid e-mail address.';
+    } else if (contactForm.email.validity.patternMismatch) {
+      errorContainer.textContent = 'Please use only lowercase characters.';
+    }
+    errorContainer.classList.remove('hidden');
+  } else {
+    contactForm.submit();
+  }
 });
