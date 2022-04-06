@@ -147,7 +147,10 @@
   <hr class="hr-bottom-line">
   <div id="popup" class="popup-hidden">
     <div class="inner-popup">
-      <img src="./mobile-popup-img.png" alt="Popup Image" id="featured_img">
+      <picture>
+        <source media="(min-width:768px)" srcset="./desktop-popup-img.png">
+        <img src="./mobile-popup-img.png" alt="Popup Image" id="featured_img">
+      </picture>
       <img src="./close-popup.svg" alt="Close popup" class="close-popup">
       <h2 class="inter popup-title naval">TITLE</h2>
       <ul class="popup-technologies card-categories inter">
