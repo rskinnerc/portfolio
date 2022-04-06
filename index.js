@@ -4,7 +4,7 @@ const navLinks = document.querySelectorAll('.toolbar ul > li');
 const recentWorksListItem = document.querySelector('#recent-works li');
 const recentWorksContainer = document.querySelector('#recent-works');
 const popup = document.querySelector('#popup');
-const closePopupBtn = popup.querySelector('#popup .close-popup');
+const closePopupBtns = popup.querySelectorAll('#popup .close-popup, #popup .close-popup-desktop');
 
 menuBtn.addEventListener('click', () => {
   menuNav.classList.toggle('menu-hidden');
@@ -152,6 +152,8 @@ recentWorksContainer.addEventListener('click', (event) => {
   }
 });
 
-closePopupBtn.addEventListener('click', () => {
-  popup.classList.toggle('popup-hidden');
+closePopupBtns.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    popup.classList.toggle('popup-hidden');
+  });
 });

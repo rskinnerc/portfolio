@@ -374,7 +374,7 @@ hr.hr-bottom-line {
   left: 0;
   right: 0;
   z-index: 100;
-  background-color:rgba(193, 199, 208, 0.8);
+  background-color: rgba(193, 199, 208, 0.8);
   backdrop-filter: blur(2px);
   overflow: scroll;
 }
@@ -396,6 +396,7 @@ hr.hr-bottom-line {
 #popup picture * {
   width: 100%;
 }
+
 #popup .popup-buttons {
   display: flex;
   justify-content: space-around;
@@ -417,6 +418,10 @@ hr.hr-bottom-line {
   width: 8%;
   height: 8%;
   cursor: pointer;
+}
+
+#popup .close-popup-desktop {
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -603,21 +608,32 @@ hr.hr-bottom-line {
 
   #popup .inner-popup {
     position: relative;
-    max-height: 80%;
     width: 60%;
     margin: 4rem auto;
     border-radius: 8px;
-    padding: 24px;
+    padding: 78px 24px 24px;
     display: grid;
     grid-template-columns: repeat(4, 25%);
-    grid-template-rows: 6fr 1fr 1fr 2fr;
-    grid-template-areas: 
+    grid-template-rows: 60% 10% 10% 10%;
+    grid-template-areas:
       "picture picture picture picture"
       "title title buttons buttons"
       "techs techs techs ."
       "p p p p";
     justify-items: stretch;
-    row-gap: 12px;
+    row-gap: 6px;
+  }
+
+  #popup .close-popup {
+    display: none;
+  }
+
+  #popup .close-popup-desktop {
+    display: block;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    cursor: pointer;
   }
 
   .inner-popup picture {
