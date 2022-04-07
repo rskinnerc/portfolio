@@ -160,17 +160,28 @@ closePopupBtns.forEach((btn) => {
   });
 });
 
-const loadForm = () => {
-  const userForm = localStorage.getItem('userForm');
+let userForm = JSON.parse(localStorage.getItem('userForm'));
 
+const loadForm = () => {
   if (userForm) {
     Object.keys(userForm).forEach((key) => {
-      contactForm.elements[key] = userForm[key];
+      contactForm.elements[key].value = userForm[key];
     });
   }
 };
 
 contactForm.onload = loadForm();
+
+Array.from(contactForm.elements).forEach((element) => {
+  element.oninput = ({ target: { value } }) => {
+    if (!userForm) {
+      userForm = {};
+    }
+    userForm[element.name] = value;
+    localStorage.setItem('userForm', JSON.stringify(userForm));
+  };
+});
+
 contactForm.addEventListener('submit', (event) => {
   event.preventDefault();
   errorContainer.classList.add('hidden');
