@@ -160,6 +160,17 @@ closePopupBtns.forEach((btn) => {
   });
 });
 
+const loadForm = () => {
+  const userForm = localStorage.getItem('userForm');
+
+  if (userForm) {
+    Object.keys(userForm).forEach((key) => {
+      contactForm.elements[key] = userForm[key];
+    });
+  }
+};
+
+contactForm.onload = loadForm();
 contactForm.addEventListener('submit', (event) => {
   event.preventDefault();
   errorContainer.classList.add('hidden');
