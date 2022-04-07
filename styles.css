@@ -78,7 +78,7 @@ h2 {
 }
 
 .headline {
-  background-image: url("./header-illsutration-mobile.svg");
+  background-image: url("./media/header-illsutration-mobile.svg");
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
@@ -128,7 +128,7 @@ h2 {
 .works h2 {
   height: 125px;
   box-sizing: content-box;
-  background-image: url(./indicator.png);
+  background-image: url(./media/indicator.png);
   background-repeat: no-repeat;
   background-position: center bottom;
 }
@@ -230,7 +230,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url(./top-bg.svg), url(./bottom-bg.svg);
+  background-image: url(./media/top-bg.svg), url(./media/bottom-bg.svg);
   background-position: right -40px, left bottom;
   background-repeat: no-repeat, no-repeat;
 }
@@ -283,7 +283,7 @@ h2 {
 }
 
 footer {
-  background-image: url(./illustration-contact-form.svg);
+  background-image: url(./media/illustration-contact-form.svg);
   background-position: right 68%;
   background-repeat: no-repeat;
   padding: 0 24px;
@@ -489,7 +489,7 @@ hr.hr-bottom-line {
   }
 
   .headline {
-    background-image: url("./header-illustration-desktop.svg");
+    background-image: url("./media/header-illustration-desktop.svg");
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
@@ -559,8 +559,8 @@ hr.hr-bottom-line {
 
   .about-me .heading {
     background-image:
-      url(./illustration-about-me-1-desktop.svg),
-      url(./illustration-about-me-2-desktop.svg);
+      url(./media/illustration-about-me-1-desktop.svg),
+      url(./media/illustration-about-me-2-desktop.svg);
     background-position: right top, left bottom;
     background-repeat: no-repeat, no-repeat;
     padding-top: 90px;
@@ -581,9 +581,9 @@ hr.hr-bottom-line {
 
   footer {
     background-image:
-      url(./contact-form-illustratoin-3-desktop.svg),
-      url(./illustration-1-contact-form-desktop.svg),
-      url(./illustration-2-contact-form-desktop.svg);
+      url(./media/contact-form-illustratoin-3-desktop.svg),
+      url(./media/illustration-1-contact-form-desktop.svg),
+      url(./media/illustration-2-contact-form-desktop.svg);
     background-position: right 75%, left 85%, 20% 80%;
     background-size: auto;
     padding: 0 8%;
