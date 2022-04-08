@@ -23,8 +23,8 @@ const RECENT_WORKS = [
     title: 'Multi-Post Stories Gain+Glory',
     name: 'Keeping track of hundreds of components',
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
-    featured_img: 'mobile-popup-img.png',
-    desktop_featured_img: 'desktop-popup-img.png',
+    featured_img: './media/mobile-popup-img.png',
+    desktop_featured_img: './media/desktop-popup-img.png',
     technologies: [
       'Ruby on Rails',
       'CSS',
@@ -38,8 +38,8 @@ const RECENT_WORKS = [
     title: 'Multi-Post Stories Gain+Glory',
     name: 'Keeping track of hundreds of components',
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
-    featured_img: 'mobile-popup-img.png',
-    desktop_featured_img: 'desktop-popup-img.png',
+    featured_img: './media/mobile-popup-img.png',
+    desktop_featured_img: './media/desktop-popup-img.png',
     technologies: [
       'Ruby on Rails',
       'CSS',
@@ -53,8 +53,8 @@ const RECENT_WORKS = [
     title: 'Multi-Post Stories Gain+Glory',
     name: 'Keeping track of hundreds of components',
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
-    featured_img: 'mobile-popup-img.png',
-    desktop_featured_img: 'desktop-popup-img.png',
+    featured_img: './media/mobile-popup-img.png',
+    desktop_featured_img: './media/desktop-popup-img.png',
     technologies: [
       'Ruby on Rails',
       'CSS',
@@ -68,8 +68,8 @@ const RECENT_WORKS = [
     title: 'Multi-Post Stories Gain+Glory',
     name: 'Keeping track of hundreds of components',
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
-    featured_img: 'mobile-popup-img.png',
-    desktop_featured_img: 'desktop-popup-img.png',
+    featured_img: './media/mobile-popup-img.png',
+    desktop_featured_img: './media/desktop-popup-img.png',
     technologies: [
       'Ruby on Rails',
       'CSS',
@@ -83,8 +83,8 @@ const RECENT_WORKS = [
     title: 'Multi-Post Stories Gain+Glory',
     name: 'Keeping track of hundreds of components',
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
-    featured_img: 'mobile-popup-img.png',
-    desktop_featured_img: 'desktop-popup-img.png',
+    featured_img: './media/mobile-popup-img.png',
+    desktop_featured_img: './media/desktop-popup-img.png',
     technologies: [
       'Ruby on Rails',
       'CSS',
@@ -98,8 +98,8 @@ const RECENT_WORKS = [
     title: 'Multi-Post Stories Gain+Glory',
     name: 'Keeping track of hundreds of components',
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
-    featured_img: 'mobile-popup-img.png',
-    desktop_featured_img: 'desktop-popup-img.png',
+    featured_img: './media/mobile-popup-img.png',
+    desktop_featured_img: './media/desktop-popup-img.png',
     technologies: [
       'Ruby on Rails',
       'CSS',
@@ -158,6 +158,28 @@ closePopupBtns.forEach((btn) => {
   btn.addEventListener('click', () => {
     popup.classList.toggle('popup-hidden');
   });
+});
+
+let userForm = JSON.parse(localStorage.getItem('userForm'));
+
+const loadForm = () => {
+  if (userForm) {
+    Object.keys(userForm).forEach((key) => {
+      contactForm.elements[key].value = userForm[key];
+    });
+  }
+};
+
+contactForm.onload = loadForm();
+
+Array.from(contactForm.elements).forEach((element) => {
+  element.oninput = ({ target: { value } }) => {
+    if (!userForm) {
+      userForm = {};
+    }
+    userForm[element.name] = value;
+    localStorage.setItem('userForm', JSON.stringify(userForm));
+  };
 });
 
 contactForm.addEventListener('submit', (event) => {
