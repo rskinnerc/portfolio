@@ -20,19 +20,18 @@ navLinks.forEach((link) => {
 
 const RECENT_WORKS = [
   {
-    title: 'Multi-Post Stories Gain+Glory',
-    name: 'Keeping track of hundreds of components',
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
-    featured_img: './media/mobile-popup-img.png',
-    desktop_featured_img: './media/desktop-popup-img.png',
+    title: 'Awesome To-Do List',
+    name: 'Awesome To-Do List',
+    description: "This is a simple but awesome to-do list built on top of pure JavaScript, HTML and CSS.",
+    featured_img: './media/todo-list.png',
+    desktop_featured_img: './media/todo-list.png',
     technologies: [
-      'Ruby on Rails',
       'CSS',
       'JavaScript',
       'HTML',
     ],
-    live: '#',
-    source: '#',
+    live: 'https://todo.micro.rskinner.cyou/',
+    source: 'https://github.com/rskinnerc/to-do-list',
   },
   {
     title: 'Multi-Post Stories Gain+Glory',
@@ -109,7 +108,7 @@ const RECENT_WORKS = [
     live: '#',
     source: '#',
   },
-];
+].reverse();
 
 for (let i = 0; i < RECENT_WORKS.length; i += 1) {
   const card = recentWorksListItem.cloneNode(true);
@@ -117,6 +116,9 @@ for (let i = 0; i < RECENT_WORKS.length; i += 1) {
   const button = card.querySelector('button');
   const categories = card.querySelector('ul.card-categories');
 
+  card.style.backgroundImage = `url(${RECENT_WORKS[i].featured_img})`;
+  card.style.backgroundSize = '110%';
+  card.style.backgroundRepeat = 'no-repeat';
   title.innerHTML = RECENT_WORKS[i].title;
   button.setAttribute('id', `seeProjectButton-${i}`);
   for (let j = 0; j < RECENT_WORKS[i].technologies.length; j += 1) {
@@ -138,6 +140,8 @@ recentWorksContainer.addEventListener('click', (event) => {
     const popupImg = popup.querySelector('#featured_img');
     const popupImgDesktop = popup.querySelector('#popup picture > source');
     const popupTechnologies = popup.querySelector('#popup ul');
+    const liveLink = popup.querySelector('[data-link-type="live"]')
+    const sourceLink = popup.querySelector('[data-link-type="source"]')
     popupTechnologies.innerHTML = '';
     RECENT_WORKS[project[1]].technologies.forEach((technology) => {
       const techItem = document.createElement('li');
@@ -150,6 +154,8 @@ recentWorksContainer.addEventListener('click', (event) => {
     popupImg.setAttribute('alt', RECENT_WORKS[project[1]].title);
     popupDescription.innerHTML = RECENT_WORKS[project[1]].description;
     popupTitle.innerHTML = RECENT_WORKS[project[1]].title;
+    liveLink.setAttribute('href', RECENT_WORKS[project[1]].live);
+    sourceLink.setAttribute('href', RECENT_WORKS[project[1]].source);
     popup.classList.toggle('popup-hidden');
   }
 });
