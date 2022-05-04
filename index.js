@@ -22,7 +22,7 @@ const RECENT_WORKS = [
   {
     title: 'Awesome To-Do List',
     name: 'Awesome To-Do List',
-    description: "This is a simple but awesome to-do list built on top of pure JavaScript, HTML and CSS.",
+    description: 'This is a simple but awesome to-do list built on top of pure JavaScript, HTML and CSS.',
     featured_img: './media/todo-list.png',
     desktop_featured_img: './media/todo-list.png',
     technologies: [
@@ -140,8 +140,8 @@ recentWorksContainer.addEventListener('click', (event) => {
     const popupImg = popup.querySelector('#featured_img');
     const popupImgDesktop = popup.querySelector('#popup picture > source');
     const popupTechnologies = popup.querySelector('#popup ul');
-    const liveLink = popup.querySelector('[data-link-type="live"]')
-    const sourceLink = popup.querySelector('[data-link-type="source"]')
+    const liveLink = popup.querySelector('[data-link-type="live"]');
+    const sourceLink = popup.querySelector('[data-link-type="source"]');
     popupTechnologies.innerHTML = '';
     RECENT_WORKS[project[1]].technologies.forEach((technology) => {
       const techItem = document.createElement('li');
