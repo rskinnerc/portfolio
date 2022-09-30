@@ -1,20 +1,31 @@
 {
-  "name": "portfolio",
-  "version": "0.1.0",
-  "private": true,
+  "name": "portafolio",
+  "version": "1.0.0",
+  "description": "Microverse Project - My Portafolio",
+  "main": "index.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "next": "12.3.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rskinnerc/portafolio.git"
   },
+  "keywords": [],
+  "author": "Ronald Skinner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rskinnerc/portafolio/issues"
+  },
+  "homepage": "https://github.com/rskinnerc/portafolio#readme",
   "devDependencies": {
-    "eslint": "8.24.0",
-    "eslint-config-next": "12.3.1"
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.4",
+    "hint": "^6.1.10",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.21.0"
   }
 }

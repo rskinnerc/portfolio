@@ -1,34 +1,68 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio
+
+> My portfolio project based on Microverse's figma templates
+
+## Built With
+
+- HTML
+- CSS
+- Code validation using Webhint, Stylelint and Lighthouse
+
+## Live Demo (if available)
+
+[Live Demo Link](https://rskinnerc.github.io/portfolio/)
 
 ## Getting Started
 
-First, run the development server:
+**This project is the initial presentation of my portfolio as a developer. It was built based on a Microverse's Figma template applying the acquired knowledge about Flexbox, HTML, and CSS through this week.**
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Installation
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Clone this repository (you must have [Git Installed](https://github.com/git-guides/install-git))
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+`git clone https://github.com/rskinnerc/portfolio.git`
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Then, move to the newly created folder `portfolio` using this command
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+`cd portfolio`
 
-## Learn More
+To open the project in Visual Studio Code type the following command inside the _portfolio_ folder
 
-To learn more about Next.js, take a look at the following resources:
+`code .`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+In order to visualize the project in your browser either open the index.html file directly from the file explorer or consider using a [live server for development ](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Authors
 
-## Deploy on Vercel
+👤 **Ronald Skinner**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- GitHub: [@rskinnerc](https://github.com/rskinnerc)
+- Twitter: [@XSkinner](https://twitter.com/XSkinner)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Colaborators
+
+👤 **Mariana Revilla Lérida**
+
+- GitHub: [@marurevi](https://github.com/marurevi)
+- Twitter: [@MaruRevilla](https://twitter.com/MaruRevilla)
+- LinkedIn: [Mariana-Revilla-Lérida](https://linkedin.com/in/mariana-revilla-lérida-a12aba143)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
