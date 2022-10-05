@@ -12,10 +12,39 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <main>
+        <p className="text-2xl font-exo font-semibold">
+        Full-Stack Web Developer
+        </p>
+        <p className="text-2xl font-exo font-bold">
+        Full-Stack Web Developer
+        </p>
+        <p className="text-2xl font-noto font-semibold">
+        Full-Stack Web Developer
+        </p>
+        <p className="text-2xl font-noto font-bold">
+        Full-Stack Web Developer
+        </p>
+        <p className="text-2xl font-caveat">
+        Full-Stack Web Developer
+        </p>
+        <p className="text-2xl font-caveat font-bold">
+        Full-Stack Web Developer
+        </p>
+        <p className="text-2xl font-caveat font-semibold">
+        Full-Stack Web Developer
+        </p>
+
+        <p className="text-2xl font-ibm">
+        Full-Stack Web Developer
+        </p>
+        <p className="text-2xl font-ibm font-bold">
+        Full-Stack Web Developer
+        </p>
+        <p className="text-2xl font-ibm font-semibold">
+        Full-Stack Web Developer
+        </p>
+
 
         <p className={styles.description}>
           Get started by editing{' '}
