@@ -4,6 +4,7 @@ import About from '../components/about'
 import Contact from '../components/contact'
 import Projects from '../components/projects'
 import Skills from '../components/skills'
+import Navbar from '../components/navbar'
 
 const Home: NextPage = () => {
   return (
@@ -15,6 +16,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
+        <Navbar />
         <section id="heading">
           <span>I am</span>
           <h1>Ronald Skinner Cardenas</h1>

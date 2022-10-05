@@ -1,4 +1,4 @@
-const { render, screen } = require("@testing-library/react");
+const { render, screen, getByText } = require("@testing-library/react");
 import Home from "../pages/index";
 
 describe("the home page", () => {
@@ -15,11 +15,11 @@ describe("the home page", () => {
   it ('should render the navigation menu', () => {
     const home = render(<Home />);
     const navbar = home.getByRole('navigation');
-    expect(navbar.getByText('Home')).toBeInTheDocument();
-    expect(navbar.getByText('About')).toBeInTheDocument();
-    expect(navbar.getByText('Skills')).toBeInTheDocument();
-    expect(navbar.getByText('Projects')).toBeInTheDocument();
-    expect(navbar.getByText('Contact')).toBeInTheDocument();
+    expect(getByText(navbar, 'Home')).toBeInTheDocument();
+    expect(getByText(navbar, 'About')).toBeInTheDocument();
+    expect(getByText(navbar, 'Skills')).toBeInTheDocument();
+    expect(getByText(navbar, 'Projects')).toBeInTheDocument();
+    expect(getByText(navbar, 'Contact')).toBeInTheDocument();
   });
 
   it("should render the index page and about section", () => {
