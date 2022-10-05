@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import About from '../components/about'
 
 const Home: NextPage = () => {
   return (
@@ -17,6 +18,7 @@ const Home: NextPage = () => {
           <h2>Full-Stack Web Developer</h2>
           <span>Empowering your company with my ideas!</span>
         </section>
+        <About />
       </main>
     </div>
   )
