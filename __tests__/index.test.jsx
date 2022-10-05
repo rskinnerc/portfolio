@@ -2,7 +2,7 @@ const { render, screen } = require("@testing-library/react");
 import Home from "../pages/index";
 
 describe("the home page", () => {
-  it("should render theindex page and heading section", () => {
+  it("should render the index page and heading section", () => {
     render(<Home />);
     expect(screen.getByText("I am")).toBeInTheDocument();
     expect(screen.getByText("Ronald Skinner Cardenas")).toBeInTheDocument();
@@ -10,6 +10,16 @@ describe("the home page", () => {
     expect(
       screen.getByText("Empowering your company with my ideas!")
     ).toBeInTheDocument();
+  });
+
+  it ('should render the navigation menu', () => {
+    const home = render(<Home />);
+    const navbar = home.getByRole('navigation');
+    expect(navbar.getByText('Home')).toBeInTheDocument();
+    expect(navbar.getByText('About')).toBeInTheDocument();
+    expect(navbar.getByText('Skills')).toBeInTheDocument();
+    expect(navbar.getByText('Projects')).toBeInTheDocument();
+    expect(navbar.getByText('Contact')).toBeInTheDocument();
   });
 
   it("should render the index page and about section", () => {
