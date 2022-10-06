@@ -2,6 +2,12 @@ const { render, screen, getByText } = require("@testing-library/react");
 import Home from "../pages/index";
 
 describe("the home page", () => {
+  beforeAll(() => {
+    window.IntersectionObserver = jest.fn(() => ({
+      observe: jest.fn(),
+    }));
+  });
+
   it("should render the index page and heading section", () => {
     render(<Home />);
     expect(screen.getByText("I am")).toBeInTheDocument();
@@ -12,14 +18,14 @@ describe("the home page", () => {
     ).toBeInTheDocument();
   });
 
-  it ('should render the navigation menu', () => {
+  it("should render the navigation menu", () => {
     const home = render(<Home />);
-    const navbar = home.getByRole('navigation');
-    expect(getByText(navbar, 'Home')).toBeInTheDocument();
-    expect(getByText(navbar, 'About')).toBeInTheDocument();
-    expect(getByText(navbar, 'Skills')).toBeInTheDocument();
-    expect(getByText(navbar, 'Projects')).toBeInTheDocument();
-    expect(getByText(navbar, 'Contact')).toBeInTheDocument();
+    const navbar = home.getByRole("navigation");
+    expect(getByText(navbar, "HOME")).toBeInTheDocument();
+    expect(getByText(navbar, "ABOUT")).toBeInTheDocument();
+    expect(getByText(navbar, "SKILLS")).toBeInTheDocument();
+    expect(getByText(navbar, "PROJECTS")).toBeInTheDocument();
+    expect(getByText(navbar, "CONTACT")).toBeInTheDocument();
   });
 
   it("should render the index page and about section", () => {

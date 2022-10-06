@@ -10,14 +10,14 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
+        <title>Ronald Skinner Cardenas - Full-Stack Web Developer</title>
         <meta name="description" content="Ronald Skinner Cardenas - Full-Stack Web Developer" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
         <Navbar />
-        <section id="heading">
+        <section id="heading" className="h-screen">
           <span>I am</span>
           <h1>Ronald Skinner Cardenas</h1>
           <h2>Full-Stack Web Developer</h2>
