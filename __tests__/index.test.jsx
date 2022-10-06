@@ -5,6 +5,7 @@ describe("the home page", () => {
   beforeAll(() => {
     window.IntersectionObserver = jest.fn(() => ({
       observe: jest.fn(),
+      disconnect: jest.fn(),
     }));
   });
 
