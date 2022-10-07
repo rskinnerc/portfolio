@@ -34,7 +34,7 @@ const Home: NextPage = () => {
               <h1 className="font-exo drop-shadow-md text-4xl text-center bg-gradient-to-r from-sky-600 to-fuchsia-600 bg-clip-text text-transparent font-bold md:text-5xl lg:text-6xl">
                 RONALD SKINNER
               </h1>
-              <h2 className="font-exo text-2xl font-semibold text-center italic text-sky-600 md:text-3xl">
+              <h2 className="font-caveat text-4xl font-semibold text-center text-sky-600 md:text-5xl">
                 Full-Stack Web Developer
               </h2>
             </div>

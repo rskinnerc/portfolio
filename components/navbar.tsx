@@ -73,7 +73,7 @@ const Navbar = () => {
       <nav
         id="navbar"
         className={
-          "h-screen bg-sky-500/5 backdrop-blur-md fixed z-50 w-full flex flex-col items-center gap-10 md:h-20 md:relative md:flex md:flex-row md:justify-around " +
+          "h-screen bg-transparent md:bg-sky-500/5 backdrop-blur-md fixed z-50 w-full flex flex-col items-center gap-10 md:h-20 md:relative md:flex md:flex-row md:justify-around " +
           showMenu
         }
       >
