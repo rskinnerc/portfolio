@@ -11,8 +11,10 @@ describe("the home page", () => {
 
   it("should render the index page and heading section", () => {
     render(<Home />);
-    expect(screen.getByText("I'm", {exact: false})).toBeInTheDocument();
-    expect(screen.getByText("Ronald Skinner", {exact: false})).toBeInTheDocument();
+    expect(screen.getByText("I'm", { exact: false })).toBeInTheDocument();
+    expect(
+      screen.getByText("Ronald Skinner", { exact: false })
+    ).toBeInTheDocument();
     expect(screen.getByText("Full-Stack Web Developer")).toBeInTheDocument();
   });
 
@@ -28,21 +30,21 @@ describe("the home page", () => {
 
   it("should render the index page and about section", () => {
     render(<Home />);
-    expect(screen.getByText("About Me")).toBeInTheDocument();
+    expect(screen.getAllByText("About Me").length).toBeGreaterThan(0);
   });
 
   it("should render the index page and skills section", () => {
     render(<Home />);
-    expect(screen.getByText("My Skills")).toBeInTheDocument();
+    expect(screen.getAllByText("My Skills").length).toBeGreaterThan(0);
   });
 
   it("should render the index page and projects section", () => {
     render(<Home />);
-    expect(screen.getByText("My Projects")).toBeInTheDocument();
+    expect(screen.getAllByText("My Projects").length).toBeGreaterThan(0);
   });
 
   it("should render the index page and contact section", () => {
     render(<Home />);
-    expect(screen.getByText("Contact Me")).toBeInTheDocument();
+    expect(screen.getAllByText("Contact Me").length).toBeGreaterThan(0);
   });
 });

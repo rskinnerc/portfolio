@@ -4,16 +4,16 @@ import Link from "next/link";
 const About = () => {
   return (
     <section id="about" className="pt-20">
-      <div className="relative h-20">
-        <h1 className="font-exo text-3xl font-bold absolute top-0.5 right-0 pr-3 tracking-wide z-10 text-sky-600">
+      <div className="relative h-20 md:mt-6 lg:mt-16 md:w-11/12 xl:w-10/12">
+        <h1 className="font-exo text-3xl font-bold absolute top-0.5 right-0 pr-3 tracking-wide z-10 text-sky-600 2xl:right-20">
           About Me
         </h1>
-        <h2 className="font-exo text-5xl font-bold absolute top-0 right-0 pr-3 tracking-wide text-fuchsia-600/10 z-0">
+        <h2 className="font-exo text-5xl font-bold absolute top-0 right-0 pr-3 tracking-wide text-fuchsia-600/10 z-0 2xl:right-20">
           About Me
         </h2>
       </div>
-      <div className="my-10 flex flex-col gap-10">
-        <div className="rounded-full border-4 border-sky-600/40 w-fit mx-auto p-0">
+      <div className="my-10 flex flex-col gap-10 md:flex-row md:w-10/12 xl:w-8/12 md:mx-auto">
+        <div className="rounded-full border-4 border-sky-600/40 w-fit mx-auto p-0 md:h-fit">
           <div className="rounded-full border-4 border-fuchsia-600/30 w-fit mx-auto p-0.5">
             <Image
               src="/photo.jpeg"
@@ -24,7 +24,7 @@ const About = () => {
             />
           </div>
         </div>
-        <div className="p-3 font-ibm">
+        <div className="p-3 font-ibm md:w-2/3 2xl:text-xl">
           <p className="mb-6 text-slate-600">
             <span className="text-3xl">I&apos;</span>m a{" "}
             <span className="bg-gradient-to-r from-sky-600 to-fuchsia-600 bg-clip-text text-transparent font-semibold">
