@@ -1,5 +1,12 @@
 import Image from "next/future/image";
 import Link from "next/link";
+import {
+  IoLogoLinkedin,
+  IoLogoGithub,
+  IoLogoTwitter,
+  IoLogoMedium,
+} from "react-icons/io5";
+import { FaAngellist } from "react-icons/fa";
 
 const About = () => {
   return (
@@ -13,7 +20,7 @@ const About = () => {
         </h2>
       </div>
       <div className="my-10 flex flex-col gap-10 md:flex-row md:w-10/12 xl:w-8/12 md:mx-auto">
-        <div className="rounded-full border-4 border-sky-600/40 w-fit mx-auto p-0 md:h-fit">
+        <div className="rounded-full border-4 border-sky-600/40 w-fit mx-auto p-0 h-fit">
           <div className="rounded-full border-4 border-fuchsia-600/30 w-fit mx-auto p-0.5">
             <Image
               src="/photo.jpeg"
@@ -40,7 +47,53 @@ const About = () => {
             dogs are my favorites. I enjoy learning new things and teaching them
             to others.{" "}
           </p>
-          <Link href="/about"><a className="font-exo animate-pulse text-fuchsia-600">Want to know me more?</a></Link>
+          <Link href="/about">
+            <a className="font-exo animate-pulse text-fuchsia-600">
+              Want to know me more?
+            </a>
+          </Link>
+          <div className="flex items-center justify-center my-10 gap-4">
+            <a
+              href="https://www.linkedin.com/in/rskinnerc/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-2xl text-sky-600 drop-shadow-md hover:text-fuchsia-600"
+            >
+              <IoLogoLinkedin />
+            </a>
+            <a
+              href="https://github.com/rskinnerc"
+              target="_blank"
+              rel="noreferrer"
+              className="text-2xl text-sky-600 drop-shadow-md hover:text-fuchsia-600"
+            >
+              <IoLogoGithub />
+            </a>
+            <a
+              href="https://twitter.com/XSkinner"
+              target="_blank"
+              rel="noreferrer"
+              className="text-2xl text-sky-600 drop-shadow-md hover:text-fuchsia-600"
+            >
+              <IoLogoTwitter />
+            </a>
+            <a
+              href="https://medium.com/@rskinnerc"
+              target="_blank"
+              rel="noreferrer"
+              className="text-2xl text-sky-600 drop-shadow-md hover:text-fuchsia-600"
+            >
+              <IoLogoMedium />
+            </a>
+            <a
+              href="https://angel.co/u/rskinnerc"
+              target="_blank"
+              rel="noreferrer"
+              className="text-2xl text-sky-600 drop-shadow-md hover:text-fuchsia-600"
+            >
+              <FaAngellist />
+            </a>
+          </div>
         </div>
       </div>
     </section>
