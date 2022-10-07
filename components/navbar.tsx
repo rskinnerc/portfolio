@@ -36,7 +36,7 @@ const Navbar = () => {
       .forEach((entry) => {
         if (entry.intersectionRatio > 0.4) {
           if (entry.target.id === "heading" && entry.intersectionRatio > 0.7) {
-            document.getElementById("navbar")!.classList.add("md:static");
+            document.getElementById("navbar")!.classList.add("md:relative");
             document
               .getElementById("navbar")!
               .classList.remove("md:sticky", "top-0");
@@ -50,7 +50,7 @@ const Navbar = () => {
 
     if (navbarEntry && !navbarEntry.isIntersecting) {
       document.getElementById("navbar")!.classList.add("md:sticky", "top-0");
-      document.getElementById("navbar")!.classList.remove("md:static");
+      document.getElementById("navbar")!.classList.remove("md:relative");
     }
   };
 
@@ -73,7 +73,7 @@ const Navbar = () => {
       <nav
         id="navbar"
         className={
-          "h-screen bg-white fixed z-50 w-full flex flex-col items-center gap-10 md:h-20 md:static md:flex md:flex-row md:justify-around " +
+          "h-screen bg-sky-500/5 backdrop-blur-md fixed z-50 w-full flex flex-col items-center gap-10 md:h-20 md:relative md:flex md:flex-row md:justify-around " +
           showMenu
         }
       >
@@ -102,7 +102,7 @@ const Navbar = () => {
         />
       </nav>
       <IoMenu
-        className="fixed top-3 right-3 text-4xl text-sky-600 z-10 drop-shadow cursor-pointer md:hidden"
+        className="fixed top-3 right-3 text-4xl text-sky-600 z-40 drop-shadow cursor-pointer md:hidden"
         onClick={() => toggleMenu()}
       />
     </>

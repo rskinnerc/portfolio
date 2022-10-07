@@ -11,12 +11,9 @@ describe("the home page", () => {
 
   it("should render the index page and heading section", () => {
     render(<Home />);
-    expect(screen.getByText("I am")).toBeInTheDocument();
-    expect(screen.getByText("Ronald Skinner Cardenas")).toBeInTheDocument();
+    expect(screen.getByText("I'm", {exact: false})).toBeInTheDocument();
+    expect(screen.getByText("Ronald Skinner", {exact: false})).toBeInTheDocument();
     expect(screen.getByText("Full-Stack Web Developer")).toBeInTheDocument();
-    expect(
-      screen.getByText("Empowering your company with my ideas!")
-    ).toBeInTheDocument();
   });
 
   it("should render the navigation menu", () => {
