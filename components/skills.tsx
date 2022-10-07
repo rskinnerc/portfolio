@@ -25,7 +25,7 @@ const Skills = (props: any) => {
             src="/soft-skills.svg"
             width={88}
             height={88}
-            className="drop-shadow-lg mx-auto mt-6"
+            className="drop-shadow-lg mx-auto mt-6 opacity-50"
             alt="Soft-Skills Icon"
           />
           <h3 className="text-fuchsia-600 font-exo font-semibold text-2xl drop-shadow text-center my-6">
@@ -54,7 +54,7 @@ const Skills = (props: any) => {
             src="/front-end.svg"
             width={88}
             height={88}
-            className="drop-shadow-lg mx-auto mt-6"
+            className="drop-shadow-lg mx-auto mt-6 opacity-50"
             alt="Soft-Skills Icon"
           />
 
@@ -84,7 +84,7 @@ const Skills = (props: any) => {
             src="/back-end.svg"
             width={88}
             height={88}
-            className="drop-shadow-lg mx-auto mt-6"
+            className="drop-shadow-lg mx-auto mt-6 opacity-50"
             alt="Soft-Skills Icon"
           />
           <h3 className="text-fuchsia-600 font-exo font-semibold text-2xl drop-shadow text-center my-6">
