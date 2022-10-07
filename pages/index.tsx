@@ -30,7 +30,7 @@ const Home: NextPage = () => {
           />
           <div className="flex h-1/2 lg:h-1/3 flex-col justify-center gap-20 relative p-2 z-30 items-center bg-sky-500/5 rounded-bl-full">
             <div>
-              <h2 className="text-xl text-center md:text-2xl">Hey there! I&apos;m</h2>{" "}
+              <h2 className="text-xl text-center md:text-2xl text-slate-600">Hey there! I&apos;m</h2>{" "}
               <h1 className="font-exo drop-shadow-md text-4xl text-center bg-gradient-to-r from-sky-600 to-fuchsia-600 bg-clip-text text-transparent font-bold md:text-5xl lg:text-6xl">
                 RONALD SKINNER
               </h1>
