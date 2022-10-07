@@ -1,4 +1,4 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import About from "../components/about";
 import Contact from "../components/contact";
@@ -8,7 +8,7 @@ import Navbar from "../components/navbar";
 import Image from "next/future/image";
 import landindBg from "../public/heading-bg.png";
 
-const Home: NextPage = () => {
+const Home: NextPage = (props: any) => {
   return (
     <div>
       <Head>
@@ -41,7 +41,7 @@ const Home: NextPage = () => {
           </div>
         </section>
         <About />
-        <Skills />
+        <Skills skills={props.skills} />
         <Projects />
         <Contact />
       </main>
@@ -50,3 +50,27 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+import getStoryblokApi, { storyblok } from "../lib/storyblok";
+
+export const getStaticProps: GetStaticProps = async () => {
+  storyblok()
+  let storyblokApi = getStoryblokApi();
+  let data = await storyblokApi.get("cdn/stories", {
+    page: 1,
+    per_page: 100,
+    version: 'published',
+    starts_with: "skills/",
+    cv: 1
+  });
+
+  const skills = data.data.stories.map((skill: any) => {
+    return skill.content
+  });
+    
+  
+
+  return {
+    props: { skills },
+  };
+}
