@@ -40,7 +40,7 @@ describe("the home page", () => {
 
   it("should render the index page and projects section", () => {
     render(<Home skills={[]} />);
-    expect(screen.getAllByText("My Projects").length).toBeGreaterThan(0);
+    expect(screen.getAllByText("Recent Work").length).toBeGreaterThan(0);
   });
 
   it("should render the index page and contact section", () => {

@@ -30,7 +30,9 @@ const Home: NextPage = (props: any) => {
           />
           <div className="flex h-1/2 lg:h-1/3 flex-col justify-center gap-20 relative p-2 z-30 items-center bg-sky-500/5 rounded-bl-full">
             <div>
-              <h2 className="text-xl text-center md:text-2xl text-slate-600">Hey there! I&apos;m</h2>{" "}
+              <h2 className="text-xl text-center md:text-2xl text-slate-600">
+                Hey there! I&apos;m
+              </h2>{" "}
               <h1 className="font-exo drop-shadow-md text-4xl text-center bg-gradient-to-r from-sky-600 to-fuchsia-600 bg-clip-text text-transparent font-bold md:text-5xl lg:text-6xl">
                 RONALD SKINNER
               </h1>
@@ -42,7 +44,7 @@ const Home: NextPage = (props: any) => {
         </section>
         <About />
         <Skills skills={props.skills} />
-        <Projects />
+        <Projects projects={props.projects} />
         <Contact />
       </main>
     </div>
@@ -54,23 +56,33 @@ export default Home;
 import getStoryblokApi, { storyblok } from "../lib/storyblok";
 
 export const getStaticProps: GetStaticProps = async () => {
-  storyblok()
+  storyblok();
   let storyblokApi = getStoryblokApi();
-  let data = await storyblokApi.get("cdn/stories", {
+  let skills = await storyblokApi.get("cdn/stories", {
     page: 1,
     per_page: 100,
-    version: 'published',
+    version: "published",
     starts_with: "skills/",
-    cv: 1
+    cv: 1,
   });
 
-  const skills = data.data.stories.map((skill: any) => {
-    return skill.content
+  let projects = await storyblokApi.get("cdn/stories", {
+    page: 1,
+    per_page: 3,
+    version: "published",
+    starts_with: "projects/",
+    cv: 1,
   });
-    
-  
+
+  skills = skills.data.stories.map((skill: any) => {
+    return skill.content;
+  });
+
+  projects = projects.data.stories.map((project: any) => {
+    return project.content;
+  });
 
   return {
-    props: { skills },
+    props: { skills, projects },
   };
-}
+};
