@@ -10,7 +10,7 @@ describe("the home page", () => {
   });
 
   it("should render the index page and heading section", () => {
-    render(<Home skills={[]} />);
+    render(<Home skills={[]} projects={[]} />);
     expect(screen.getByText("I'm", { exact: false })).toBeInTheDocument();
     expect(
       screen.getByText("Ronald Skinner", { exact: false })
@@ -19,7 +19,7 @@ describe("the home page", () => {
   });
 
   it("should render the navigation menu", () => {
-    const home = render(<Home skills={[]} />);
+    const home = render(<Home skills={[]} projects={[]} />);
     const navbar = home.getByRole("navigation");
     expect(getByText(navbar, "HOME")).toBeInTheDocument();
     expect(getByText(navbar, "ABOUT")).toBeInTheDocument();
@@ -29,22 +29,22 @@ describe("the home page", () => {
   });
 
   it("should render the index page and about section", () => {
-    render(<Home skills={[]} />);
+    render(<Home skills={[]} projects={[]} />);
     expect(screen.getAllByText("About Me").length).toBeGreaterThan(0);
   });
 
   it("should render the index page and skills section", () => {
-    render(<Home skills={[]} />);
+    render(<Home skills={[]} projects={[]} />);
     expect(screen.getAllByText("My Skills").length).toBeGreaterThan(0);
   });
 
   it("should render the index page and projects section", () => {
-    render(<Home skills={[]} />);
+    render(<Home skills={[]} projects={[]} />);
     expect(screen.getAllByText("Recent Work").length).toBeGreaterThan(0);
   });
 
   it("should render the index page and contact section", () => {
-    render(<Home skills={[]} />);
+    render(<Home skills={[]} projects={[]} />);
     expect(screen.getAllByText("Contact Me").length).toBeGreaterThan(0);
   });
 });
