@@ -34,7 +34,7 @@ const Skills = (props: any) => {
           <ul>
             {soft.map((skill: any) => (
               <li
-                className="text-slate-600 font-exo font-semibold drop-shadow text-center my-2 flex items-center gap-3"
+                className="text-slate-600 font-ibm drop-shadow text-center my-2 flex items-center gap-3"
                 key={skill.label}
               >
                 <Image
@@ -64,7 +64,7 @@ const Skills = (props: any) => {
           <ul>
             {frontend.map((skill: any) => (
               <li
-                className="text-slate-600 font-exo font-semibold drop-shadow text-center my-2 flex items-center gap-3"
+                className="text-slate-600 font-ibm drop-shadow text-center my-2 flex items-center gap-3"
                 key={skill.label}
               >
                 <Image
@@ -93,7 +93,7 @@ const Skills = (props: any) => {
           <ul>
             {backend.map((skill: any) => (
               <li
-                className="text-slate-600 font-exo font-semibold drop-shadow text-center my-2 flex items-center gap-3"
+                className="text-slate-600 font-ibm drop-shadow text-center my-2 flex items-center gap-3"
                 key={skill.label}
               >
                 <Image
