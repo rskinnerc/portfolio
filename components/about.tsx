@@ -37,10 +37,10 @@ const About = () => {
             <span className="bg-gradient-to-r from-sky-600 to-fuchsia-600 bg-clip-text text-transparent font-semibold">
               Full-stack web developer{" "}
             </span>
-            and veterinary doctor based in Colombia, passionate about finding
-            solutions to real-world problems through clean and performant code.
-            Fluent in multiple languages, frameworks, technologies, and modern
-            tools, capable of ramping up quickly and efficiently.
+            and veterinary doctor based in Colombia, passionate about
+            programming and clean code. A critical-thinking and problem-solving
+            person, willing to improve people&apos;s lives by creating engaging
+            applications for individuals and enterprises.
           </p>
           <p className="mb-6 text-slate-600">
             <span className="text-3xl">I</span> love animals, but horses and

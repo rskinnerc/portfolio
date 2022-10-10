@@ -10,7 +10,7 @@ describe("the home page", () => {
   });
 
   it("should render the index page and heading section", () => {
-    render(<Home />);
+    render(<Home skills={[]} />);
     expect(screen.getByText("I'm", { exact: false })).toBeInTheDocument();
     expect(
       screen.getByText("Ronald Skinner", { exact: false })
@@ -19,7 +19,7 @@ describe("the home page", () => {
   });
 
   it("should render the navigation menu", () => {
-    const home = render(<Home />);
+    const home = render(<Home skills={[]} />);
     const navbar = home.getByRole("navigation");
     expect(getByText(navbar, "HOME")).toBeInTheDocument();
     expect(getByText(navbar, "ABOUT")).toBeInTheDocument();
@@ -29,22 +29,22 @@ describe("the home page", () => {
   });
 
   it("should render the index page and about section", () => {
-    render(<Home />);
+    render(<Home skills={[]} />);
     expect(screen.getAllByText("About Me").length).toBeGreaterThan(0);
   });
 
   it("should render the index page and skills section", () => {
-    render(<Home />);
+    render(<Home skills={[]} />);
     expect(screen.getAllByText("My Skills").length).toBeGreaterThan(0);
   });
 
   it("should render the index page and projects section", () => {
-    render(<Home />);
+    render(<Home skills={[]} />);
     expect(screen.getAllByText("My Projects").length).toBeGreaterThan(0);
   });
 
   it("should render the index page and contact section", () => {
-    render(<Home />);
+    render(<Home skills={[]} />);
     expect(screen.getAllByText("Contact Me").length).toBeGreaterThan(0);
   });
 });
