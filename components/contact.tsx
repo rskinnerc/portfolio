@@ -15,6 +15,7 @@ const Contact = () => {
           Contact Me
         </h2>
       </div>
+      <p className="p-2 md:w-9/12 lg:w-1/2 md:mx-auto font-ibm text-lg text-center">I have created an awesome personal Telegram Bot that will notify me whenever you send me a contact message.</p>
       <Formik
         initialValues={{ name: "", email: "", message: "" }}
         validationSchema={Yup.object({
@@ -33,9 +34,9 @@ const Contact = () => {
         onSubmit={() => {}}
       >
         {(form) => (
-          <Form className="flex flex-col p-2 gap-4">
+          <Form className="flex flex-col p-2 gap-4 md:w-9/12 lg:w-1/2 md:mx-auto mb-36">
             <Field
-              className="text-xl text-sky-600 placeholder:text-sky-600/30 p-2 h-16"
+              className="text-sky-600 placeholder:text-sky-600/30 font-ibm p-2 h-12"
               type="text"
               name="name"
               placeholder="Your Name"
@@ -46,7 +47,7 @@ const Contact = () => {
               component="div"
             />
             <Field
-              className="text-xl text-sky-600 placeholder:text-sky-600/30 p-2 h-16"
+              className="text-sky-600 placeholder:text-sky-600/30 font-ibm p-2 h-12"
               type="email"
               name="email"
               placeholder="Your Email"
@@ -57,7 +58,7 @@ const Contact = () => {
               component="div"
             />
             <Field
-              className="text-xl text-sky-600 placeholder:text-sky-600/30 p-2 h-48"
+              className="text-sky-600 placeholder:text-sky-600/30 font-ibm p-2 h-48"
               type="text"
               as="textarea"
               name="message"
