@@ -8,7 +8,7 @@ const ProjectCard = (props: any) => {
   const dispatch = useDispatch();
 
   return (
-    <div className="relative aspect-video m-2 rounded-md overflow-y-hidden shadow">
+    <div className="relative aspect-video m-2 rounded-md overflow-y-hidden shadow md:w-8/12 lg:w-5/12">
       <div className="border rounded-t-md flex flex-row items-center p-1 gap-1 bg-slate-100">
         <span className="rounded-full h-2 w-2 bg-sky-300 inline-block"></span>
         <span className="rounded-full h-2 w-2 bg-fuchsia-300 inline-block"></span>
@@ -21,7 +21,10 @@ const ProjectCard = (props: any) => {
         alt={props.project.name}
       />
       <RiLightbulbFill className="absolute bottom-3 right-3 text-fuchsia-200 text-xl animate-ping" />
-      <RiLightbulbFill className="absolute bottom-3 right-3 text-fuchsia-400 text-xl drop-shadow" onClick={() => dispatch(showDetails(props.project))} />
+      <RiLightbulbFill
+        className="absolute bottom-3 right-3 text-fuchsia-400 text-xl drop-shadow cursor-pointer"
+        onClick={() => dispatch(showDetails(props.project))}
+      />
     </div>
   );
 };
