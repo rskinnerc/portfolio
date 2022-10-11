@@ -6,7 +6,7 @@ import { firebaseInit } from 'firespot'
 import { getAnalytics } from "firebase/analytics";
 import { useEffect } from 'react'
 
-firebaseInit();
+firebaseInit(null, false);
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {

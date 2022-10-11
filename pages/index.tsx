@@ -30,7 +30,9 @@ const Home: NextPage = (props: any) => {
           />
           <div className="flex h-1/2 lg:h-1/3 flex-col justify-center gap-20 relative p-2 z-30 items-center bg-sky-500/5 rounded-bl-full">
             <div>
-              <h2 className="text-xl text-center md:text-2xl text-slate-600">Hey there! I&apos;m</h2>{" "}
+              <h2 className="text-xl text-center md:text-2xl text-slate-600">
+                Hey there! I&apos;m
+              </h2>{" "}
               <h1 className="font-exo drop-shadow-md text-4xl text-center bg-gradient-to-r from-sky-600 to-fuchsia-600 bg-clip-text text-transparent font-bold md:text-5xl lg:text-6xl">
                 RONALD SKINNER
               </h1>
@@ -39,10 +41,11 @@ const Home: NextPage = (props: any) => {
               </h2>
             </div>
           </div>
+          <Link href="#contact"><a  className="absolute bottom-16 left-1/2 translate -translate-x-1/2 from-fuchsia-900 to-fuchsia-700 hover:from-sky-900 hover:to-sky-700 bg-gradient-to-r shadow-fuchsia-900/50 hover:shadow-sky-900/50 shadow-md hover:shadow-lg p-2 rounded-md text-white font-bold font-exo z-40">Let&apos;s Connect</a></Link>
         </section>
         <About />
         <Skills skills={props.skills} />
-        <Projects />
+        <Projects projects={props.projects} />
         <Contact />
       </main>
     </div>
@@ -52,25 +55,39 @@ const Home: NextPage = (props: any) => {
 export default Home;
 
 import getStoryblokApi, { storyblok } from "../lib/storyblok";
+import Link from "next/link";
 
 export const getStaticProps: GetStaticProps = async () => {
-  storyblok()
+  storyblok();
   let storyblokApi = getStoryblokApi();
-  let data = await storyblokApi.get("cdn/stories", {
+  let skillsData = await storyblokApi.get("cdn/stories", {
     page: 1,
     per_page: 100,
-    version: 'published',
+    version: "published",
     starts_with: "skills/",
-    cv: 1
+    cv: 1,
   });
 
-  const skills = data.data.stories.map((skill: any) => {
-    return skill.content
+  let projects = await storyblokApi.get("cdn/stories", {
+    page: 1,
+    per_page: 3,
+    version: "published",
+    starts_with: "projects/",
+    cv: 1,
   });
-    
+
+  let skills = skillsData.data.stories.map((skill: any) => {
+    return { ...skill.content, uuid: skill.uuid };
+  });
   
+  projects = projects.data.stories.map((project: any) => {
+    project.content.skills = project.content.skills.map((skill: any) => {
+      return skills.find((s: any) => s.uuid === skill);
+    });
+    return project.content;
+  });
 
   return {
-    props: { skills },
+    props: { skills, projects },
   };
-}
+};
