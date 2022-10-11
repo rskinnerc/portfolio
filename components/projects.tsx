@@ -5,6 +5,7 @@ import ProjectCard from "./projectCard";
 import { MdDragHandle } from "react-icons/md";
 import Image from "next/future/image";
 import Link from "next/link";
+import { IoLogoGithub, IoRocket } from "react-icons/io5";
 
 const Projects = (props: any) => {
   const project = useSelector((state: any) => state.projects.project);
@@ -48,8 +49,26 @@ const Projects = (props: any) => {
             <span className="flex justify-center text-xl cursor-pointer">
               <MdDragHandle />
             </span>
-            <h3 className="text-fuchsia-600 font-bold font-ibm">
+            <h3 className="text-fuchsia-600 font-bold font-ibm flex items-center gap-5 my-3 justify-between">
               {project.name}
+              <div className="flex gap-3">
+                <a
+                  href={project.demo}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-sky-200 font-exo text-sm cursor-pointer flex flex-col items-center"
+                >
+                  Live <IoRocket className="text-lg" />
+                </a>
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-sky-200 font-exo text-sm cursor-pointer flex flex-col items-center"
+                >
+                  GitHub <IoLogoGithub className="text-lg" />
+                </a>
+              </div>
             </h3>
             <p className="font-ibm tracking-tighter leading-tight">
               {project.description}
