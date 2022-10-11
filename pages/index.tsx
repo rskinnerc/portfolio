@@ -41,7 +41,11 @@ const Home: NextPage = (props: any) => {
               </h2>
             </div>
           </div>
-          <Link href="#contact"><a  className="absolute bottom-16 left-1/2 translate -translate-x-1/2 from-fuchsia-900 to-fuchsia-700 hover:from-sky-900 hover:to-sky-700 bg-gradient-to-r shadow-fuchsia-900/50 hover:shadow-sky-900/50 shadow-md hover:shadow-lg p-2 rounded-md text-white font-bold font-exo z-40">Let&apos;s Connect</a></Link>
+          <Link href="#contact">
+            <a className="absolute bottom-16 left-1/2 translate -translate-x-1/2 from-fuchsia-900 to-fuchsia-700 hover:from-sky-900 hover:to-sky-700 bg-gradient-to-r shadow-fuchsia-900/50 hover:shadow-sky-900/50 shadow-md hover:shadow-lg py-2 px-4 rounded-md text-white font-bold font-exo z-40">
+              LET&apos;S CONNECT
+            </a>
+          </Link>
         </section>
         <About />
         <Skills skills={props.skills} />
@@ -79,7 +83,7 @@ export const getStaticProps: GetStaticProps = async () => {
   let skills = skillsData.data.stories.map((skill: any) => {
     return { ...skill.content, uuid: skill.uuid };
   });
-  
+
   projects = projects.data.stories.map((project: any) => {
     project.content.skills = project.content.skills.map((skill: any) => {
       return skills.find((s: any) => s.uuid === skill);

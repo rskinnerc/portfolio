@@ -31,7 +31,7 @@ const Projects = (props: any) => {
         ))}
       </div>
       <Link href="/work">
-        <a className="w-1/2 md:w-5/12 lg:w-1/3 mx-auto block text-center from-fuchsia-900 to-fuchsia-700 hover:from-sky-900 hover:to-sky-700 bg-gradient-to-r shadow-fuchsia-900/50 hover:shadow-sky-900/50 shadow-md hover:shadow-lg p-2 rounded-md text-white font-bold font-exo z-40">
+        <a className="w-1/2 md:w-2/6 lg:w-1/6 mx-auto block text-center from-fuchsia-900 to-fuchsia-700 hover:from-sky-900 hover:to-sky-700 bg-gradient-to-r shadow-fuchsia-900/50 hover:shadow-sky-900/50 shadow-md hover:shadow-lg p-2 rounded-md text-white font-bold font-exo z-40">
           SEE MORE
         </a>
       </Link>
