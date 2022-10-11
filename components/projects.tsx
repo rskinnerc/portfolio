@@ -33,13 +33,13 @@ const Projects = (props: any) => {
         id="project-details"
         onClick={() => dispatch(hideDetails())}
         className={
-          "h-72 md:h-68 w-full z-40 fixed bottom-0 text-white from-slate-800 to-slate-600 bg-gradient-to-tr rounded-t-xl translate transition-transform p-2 md:p-6 md:w-10/12 lg:w-8/12 md:left-1/2 md:-translate-x-1/2 " +
+          "h-72 md:h-68 w-full z-40 fixed bottom-0 text-white from-slate-800 to-slate-600 bg-gradient-to-tr rounded-t-xl shadow-md translate transition-transform p-2 md:p-6 md:w-10/12 lg:w-8/12 md:left-1/2 md:-translate-x-1/2 " +
           detailsClasses
         }
       >
         {project && (
           <>
-            <span className="flex justify-center text-xl">
+            <span className="flex justify-center text-xl cursor-pointer">
               <MdDragHandle />
             </span>
             <h3 className="text-fuchsia-600 font-bold font-ibm">
