@@ -9,7 +9,7 @@ const ProjectCard = (props: any) => {
 
   return (
     <div className="relative aspect-video m-2 rounded-md overflow-y-hidden shadow md:w-8/12 lg:w-5/12">
-      <div className="border rounded-t-md flex flex-row items-center p-1 gap-1 bg-slate-100">
+      <div className="rounded-t-md flex flex-row items-center p-1 gap-1 bg-slate-700">
         <span className="rounded-full h-2 w-2 bg-sky-300 inline-block"></span>
         <span className="rounded-full h-2 w-2 bg-fuchsia-300 inline-block"></span>
         <span className="rounded-full h-2 w-2 bg-slate-300 inline-block"></span>

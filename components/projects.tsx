@@ -4,6 +4,7 @@ import { hideDetails } from "../store/project";
 import ProjectCard from "./projectCard";
 import { MdDragHandle } from "react-icons/md";
 import Image from "next/future/image";
+import Link from "next/link";
 
 const Projects = (props: any) => {
   const project = useSelector((state: any) => state.projects.project);
@@ -29,6 +30,11 @@ const Projects = (props: any) => {
           <ProjectCard key={project._uid} project={project} />
         ))}
       </div>
+      <Link href="/work">
+        <a className="w-1/2 md:w-5/12 lg:w-1/3 mx-auto block text-center from-sky-600 to-fuchsia-400 bg-gradient-to-r p-2 rounded-md shadow-md font-bold font-exo hover:from-sky-700 hover:to-fuchsia-500 text-white ">
+          SEE MORE
+        </a>
+      </Link>
       <div
         id="project-details"
         onClick={() => dispatch(hideDetails())}
