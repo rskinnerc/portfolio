@@ -1,9 +1,11 @@
 import Image from "next/future/image";
 import { useRef } from "react";
 import { RiLightbulbFill } from "react-icons/ri";
+import { useDispatch } from "react-redux";
+import { showDetails } from "../store/project";
 
 const ProjectCard = (props: any) => {
-  const overlay = useRef<HTMLDivElement>(null);
+  const dispatch = useDispatch();
 
   return (
     <div className="relative aspect-video m-2 rounded-md overflow-y-hidden shadow">
@@ -19,7 +21,7 @@ const ProjectCard = (props: any) => {
         alt={props.project.name}
       />
       <RiLightbulbFill className="absolute bottom-3 right-3 text-fuchsia-200 text-xl animate-ping" />
-      <RiLightbulbFill className="absolute bottom-3 right-3 text-fuchsia-400 text-xl drop-shadow" />
+      <RiLightbulbFill className="absolute bottom-3 right-3 text-fuchsia-400 text-xl drop-shadow" onClick={() => dispatch(showDetails(props.project))} />
     </div>
   );
 };

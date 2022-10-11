@@ -58,7 +58,7 @@ import getStoryblokApi, { storyblok } from "../lib/storyblok";
 export const getStaticProps: GetStaticProps = async () => {
   storyblok();
   let storyblokApi = getStoryblokApi();
-  let skills = await storyblokApi.get("cdn/stories", {
+  let skillsData = await storyblokApi.get("cdn/stories", {
     page: 1,
     per_page: 100,
     version: "published",
@@ -74,11 +74,14 @@ export const getStaticProps: GetStaticProps = async () => {
     cv: 1,
   });
 
-  skills = skills.data.stories.map((skill: any) => {
-    return skill.content;
+  let skills = skillsData.data.stories.map((skill: any) => {
+    return { ...skill.content, uuid: skill.uuid };
   });
-
+  
   projects = projects.data.stories.map((project: any) => {
+    project.content.skills = project.content.skills.map((skill: any) => {
+      return skills.find((s: any) => s.uuid === skill);
+    });
     return project.content;
   });
 
