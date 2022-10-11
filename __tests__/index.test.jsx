@@ -1,5 +1,9 @@
 const { render, screen, getByText } = require("@testing-library/react");
 import Home from "../pages/index";
+import {store} from "../store/store";
+import {Provider} from "react-redux";
+
+const HomeComponent = <Provider store={store}><Home skills={[]} projects={[]} /></Provider>;
 
 describe("the home page", () => {
   beforeAll(() => {
@@ -10,7 +14,7 @@ describe("the home page", () => {
   });
 
   it("should render the index page and heading section", () => {
-    render(<Home skills={[]} projects={[]} />);
+    render(HomeComponent);
     expect(screen.getByText("I'm", { exact: false })).toBeInTheDocument();
     expect(
       screen.getByText("Ronald Skinner", { exact: false })
@@ -19,7 +23,7 @@ describe("the home page", () => {
   });
 
   it("should render the navigation menu", () => {
-    const home = render(<Home skills={[]} projects={[]} />);
+    const home = render(HomeComponent);
     const navbar = home.getByRole("navigation");
     expect(getByText(navbar, "HOME")).toBeInTheDocument();
     expect(getByText(navbar, "ABOUT")).toBeInTheDocument();
@@ -29,22 +33,22 @@ describe("the home page", () => {
   });
 
   it("should render the index page and about section", () => {
-    render(<Home skills={[]} projects={[]} />);
+    render(HomeComponent);
     expect(screen.getAllByText("About Me").length).toBeGreaterThan(0);
   });
 
   it("should render the index page and skills section", () => {
-    render(<Home skills={[]} projects={[]} />);
+    render(HomeComponent);
     expect(screen.getAllByText("My Skills").length).toBeGreaterThan(0);
   });
 
   it("should render the index page and projects section", () => {
-    render(<Home skills={[]} projects={[]} />);
+    render(HomeComponent);
     expect(screen.getAllByText("Recent Work").length).toBeGreaterThan(0);
   });
 
   it("should render the index page and contact section", () => {
-    render(<Home skills={[]} projects={[]} />);
+    render(HomeComponent);
     expect(screen.getAllByText("Contact Me").length).toBeGreaterThan(0);
   });
 });
