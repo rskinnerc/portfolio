@@ -41,6 +41,7 @@ const Home: NextPage = (props: any) => {
               </h2>
             </div>
           </div>
+          <Link href="#contact"><a  className="absolute bottom-16 left-1/2 translate -translate-x-1/2 from-fuchsia-900 to-fuchsia-700 hover:from-sky-900 hover:to-sky-700 bg-gradient-to-r shadow-fuchsia-900/50 hover:shadow-sky-900/50 shadow-md hover:shadow-lg p-2 rounded-md text-white font-bold font-exo z-40">Let&apos;s Connect</a></Link>
         </section>
         <About />
         <Skills skills={props.skills} />
@@ -54,6 +55,7 @@ const Home: NextPage = (props: any) => {
 export default Home;
 
 import getStoryblokApi, { storyblok } from "../lib/storyblok";
+import Link from "next/link";
 
 export const getStaticProps: GetStaticProps = async () => {
   storyblok();
