@@ -64,7 +64,7 @@ const Home: NextPage = (props: any) => {
         <Contact />
         <hr />
         <footer className="bg-sky-100 py-6 ">
-          <div className="flex flex-col md:flex-row items-start md:w-11/12 xl:w-10/12 mx-auto">
+          <div className="flex flex-col md:flex-row md:items-start md:gap-11 md:w-11/12 xl:w-10/12 mx-auto">
             <div className="md:w-1/3">
               <Image
                 src="/logo-min.png"
@@ -140,6 +140,7 @@ const Home: NextPage = (props: any) => {
               </ul>
             </div>
           </div>
+          <p className="text-center font-exo text-slate-600 italic mt-20">Copyright &copy; 2022 Ronald Skinner Cardenas - Full-Stack Developer</p>
         </footer>
       </main>
     </div>
