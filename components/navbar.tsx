@@ -44,6 +44,10 @@ const Navbar = () => {
 
           setActive(`#${entry.target.id}`);
         }
+
+        if (entry.intersectionRatio > 0.2) {
+          entry.target.classList.remove("opacity-10", "opacity-0");
+        }
       });
 
     const navbarEntry = entries.find((entry) => entry.target.id === "navbar");

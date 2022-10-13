@@ -10,7 +10,7 @@ const Skills = (props: any) => {
   const soft = props.skills.filter((skill: any) => skill.category === "soft");
 
   return (
-    <section id="skills" className="py-20 bg-sky-50/50">
+    <section id="skills" className="py-20 bg-sky-50/50 opacity-10 transition-opacity delay-300">
       <div className="relative h-20 md:mt-6 lg:mt-16 md:w-11/12 xl:w-10/12">
         <h1 className="font-exo text-3xl font-bold absolute top-0.5 right-0 pr-3 tracking-wide z-10 text-sky-600 2xl:right-20">
           My Skills
