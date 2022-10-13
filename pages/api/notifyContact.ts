@@ -19,7 +19,7 @@ export default async function handler(
       body: JSON.stringify({
         chat_id: process.env.TELEGRAM_CHAT_ID,
         parse_mode: "HTML",
-        text: `<b>${req.body.name}</b> &lt;${req.body.email}&gt; contacted you through your portfolio form saying: <br> <b>${req.body.message}</b> </pre>`,
+        text: `<b>${req.body.name}</b> &lt;${req.body.email}&gt; contacted you through your portfolio form saying: <pre> <b>${req.body.message}</b> </pre>`,
       }),
     }
   );
