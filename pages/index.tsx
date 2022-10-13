@@ -22,7 +22,7 @@ const Home: NextPage = (props: any) => {
 
       <main>
         <Navbar />
-        <section id="heading" className="h-screen">
+        <section id="heading" className="h-screen opacity-0 transition-opacity delay-300 will-change-auto">
           <Image
             src={landindBg}
             alt="Ronald Skinner Landing Page"
