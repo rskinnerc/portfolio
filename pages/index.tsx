@@ -7,6 +7,14 @@ import Skills from "../components/skills";
 import Navbar from "../components/navbar";
 import Image from "next/future/image";
 import landindBg from "../public/heading-bg.png";
+import {
+  IoLogoLinkedin,
+  IoLogoGithub,
+  IoLogoTwitter,
+  IoLogoMedium,
+  IoStar,
+} from "react-icons/io5";
+import { FaAngellist } from "react-icons/fa";
 
 const Home: NextPage = (props: any) => {
   return (
@@ -22,7 +30,10 @@ const Home: NextPage = (props: any) => {
 
       <main>
         <Navbar />
-        <section id="heading" className="h-screen opacity-0 transition-opacity delay-300 will-change-auto">
+        <section
+          id="heading"
+          className="h-screen opacity-0 transition-opacity delay-300 will-change-auto"
+        >
           <Image
             src={landindBg}
             alt="Ronald Skinner Landing Page"
@@ -51,6 +62,86 @@ const Home: NextPage = (props: any) => {
         <Skills skills={props.skills} />
         <Projects projects={props.projects} />
         <Contact />
+        <hr />
+        <footer className="bg-sky-100 py-6 ">
+          <div className="flex flex-col md:flex-row md:items-start md:gap-11 md:w-11/12 xl:w-10/12 mx-auto">
+            <div className="md:w-1/3">
+              <Image
+                src="/logo-min.png"
+                width={340}
+                height={232}
+                className="w-24 mx-auto drop-shadow-lg"
+                alt="Ronald Skinner Dev"
+              />
+            </div>
+            <div className=" md:w-1/3">
+              <h3 className="font-exo text-xl text-sky-600 font-semibold text-center mb-6">
+                Find Me
+              </h3>
+              <div className="flex items-center justify-center my-10 md:mt-0 gap-4">
+                <a
+                  href="https://www.linkedin.com/in/rskinnerc/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-3xl text-sky-600 drop-shadow-md hover:text-fuchsia-600"
+                >
+                  <IoLogoLinkedin />
+                </a>
+                <a
+                  href="https://github.com/rskinnerc"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-3xl text-sky-600 drop-shadow-md hover:text-fuchsia-600"
+                >
+                  <IoLogoGithub />
+                </a>
+                <a
+                  href="https://twitter.com/XSkinner"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-3xl text-sky-600 drop-shadow-md hover:text-fuchsia-600"
+                >
+                  <IoLogoTwitter />
+                </a>
+                <a
+                  href="https://medium.com/@rskinnerc"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-3xl text-sky-600 drop-shadow-md hover:text-fuchsia-600"
+                >
+                  <IoLogoMedium />
+                </a>
+                <a
+                  href="https://angel.co/u/rskinnerc"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-3xl text-sky-600 drop-shadow-md hover:text-fuchsia-600"
+                >
+                  <FaAngellist />
+                </a>
+              </div>
+            </div>
+            <div className="px-2 md:w-1/3">
+              <h3 className="font-exo text-xl text-sky-600 font-semibold text-center mb-6">
+                Latest Projects
+              </h3>
+              <ul>
+                {props.projects.map((project: any) => {
+                  return (
+                    <li
+                      key={project._uid}
+                      className="text-slate-600 font-ibm flex items-center gap-3"
+                    >
+                      <IoStar className="text-sm" />{" "}
+                      <a href={project.demo}>{project.name}</a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </div>
+          <p className="text-center font-exo text-slate-600 italic mt-20">Copyright &copy; 2022 Ronald Skinner Cardenas - Full-Stack Developer</p>
+        </footer>
       </main>
     </div>
   );
