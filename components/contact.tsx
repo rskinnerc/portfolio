@@ -15,7 +15,10 @@ const Contact = () => {
           Contact Me
         </h2>
       </div>
-      <p className="p-2 md:w-9/12 lg:w-1/2 md:mx-auto font-ibm text-lg text-center">I have created an awesome personal Telegram Bot that will notify me whenever you send me a contact message.</p>
+      <p className="p-2 md:w-9/12 lg:w-1/2 md:mx-auto font-ibm text-lg text-center">
+        I have created an awesome personal Telegram Bot that will notify me
+        whenever you send me a contact message.
+      </p>
       <Formik
         initialValues={{ name: "", email: "", message: "" }}
         validationSchema={Yup.object({
@@ -31,7 +34,15 @@ const Contact = () => {
             .max(100, "Must be 255 characters or less")
             .required("Required"),
         })}
-        onSubmit={() => {}}
+        onSubmit={async (values, { setSubmitting }) => {
+          const res = await fetch("/api/notifyContact", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(values),
+          });
+        }}
       >
         {(form) => (
           <Form className="flex flex-col p-2 gap-4 md:w-9/12 lg:w-1/2 md:mx-auto mb-36">
