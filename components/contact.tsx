@@ -19,9 +19,9 @@ const Contact = () => {
           Contact Me
         </h2>
       </div>
-      <p className="p-2 md:w-9/12 lg:w-1/2 md:mx-auto font-ibm text-lg text-center">
-        I have created an awesome personal Telegram Bot that will notify me
-        whenever you send me a contact message.
+      <p className="p-2 my-2 md:w-9/12 lg:w-1/2 md:mx-auto font-ibm text-lg text-center">
+        I like experimenting with new stuff, so I created an amazing personal
+        Telegram Bot that will notify me whenever you send me a contact message.
       </p>
       {!messageSent && (
         <Formik
@@ -57,7 +57,7 @@ const Contact = () => {
           }}
         >
           {(form) => (
-            <Form className="flex flex-col p-2 gap-4 md:w-9/12 lg:w-1/2 md:mx-auto mb-36">
+            <Form className="flex flex-col p-2 gap-4 md:w-9/12 lg:w-1/2 md:mx-auto">
               <Field
                 className="text-sky-600 placeholder:text-sky-600/30 font-ibm p-2 h-12"
                 type="text"
@@ -106,8 +106,13 @@ const Contact = () => {
       {messageSent && (
         <div className="flex flex-col items-center justify-center md:w-9/12 lg:w-1/2 md:mx-auto my-20">
           <FaTelegramPlane className="text-6xl text-sky-600 animate-pulse drop-shadow-lg" />
-          <h2 className="text-xl text-fuchsia-600 font-exo italic">Message Sent!</h2>
-          <p className="text-center text-sky-600 font-ibm p-2">Your message was sent. I will contact you back soon. Thank you for reaching out.</p>
+          <h2 className="text-xl text-fuchsia-600 font-exo italic">
+            Message Sent!
+          </h2>
+          <p className="text-center text-sky-600 font-ibm p-2">
+            Thank you for reaching out. I have received your message and I will
+            contact you back soon.
+          </p>
         </div>
       )}
     </section>
