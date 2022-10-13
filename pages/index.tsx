@@ -22,7 +22,10 @@ const Home: NextPage = (props: any) => {
 
       <main>
         <Navbar />
-        <section id="heading" className="h-screen opacity-0 transition-opacity delay-300 will-change-auto">
+        <section
+          id="heading"
+          className="h-screen opacity-0 transition-opacity delay-300 will-change-auto"
+        >
           <Image
             src={landindBg}
             alt="Ronald Skinner Landing Page"
@@ -51,6 +54,20 @@ const Home: NextPage = (props: any) => {
         <Skills skills={props.skills} />
         <Projects projects={props.projects} />
         <Contact />
+        <hr />
+        <footer className="bg-sky-100">
+          <div>
+            <Image
+              src="/logo-min.png"
+              width={340}
+              height={232}
+              className="w-24 mx-auto"
+              alt="Ronald Skinner Dev"
+            />
+          </div>
+          <div>Social media</div>
+          <div>Latest Projects</div>
+        </footer>
       </main>
     </div>
   );

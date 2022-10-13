@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import { TbLayoutSidebarLeftCollapse } from "react-icons/tb";
 import { IoMenu } from "react-icons/io5";
-import Image from "next/image";
+import Image from "next/future/image";
 import { useEffect, useState } from "react";
 
 const Navbar = () => {
@@ -82,9 +82,10 @@ const Navbar = () => {
         }
       >
         <Image
-          src="/vercel.svg"
-          width={100}
-          height={100}
+          src="/logo-min.png"
+          width={340}
+          height={232}
+          className="w-24 my-6"
           alt="Ronald Skinner Dev"
         />
         <ul className="flex flex-col w-full items-center gap-4 font-semibold font-exo md:flex-row md:w-fit">
