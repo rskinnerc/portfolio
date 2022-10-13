@@ -85,7 +85,7 @@ const Navbar = () => {
           src="/logo-min.png"
           width={340}
           height={232}
-          className="w-24 my-6"
+          className="w-24 my-6 drop-shadow-lg"
           alt="Ronald Skinner Dev"
         />
         <ul className="flex flex-col w-full items-center gap-4 font-semibold font-exo md:flex-row md:w-fit">
