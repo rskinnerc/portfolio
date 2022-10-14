@@ -16,10 +16,12 @@ import {
   IoStar,
 } from "react-icons/io5";
 import { FaAngellist } from "react-icons/fa";
+import Script from "next/script";
 
 const Home: NextPage = (props: any) => {
   return (
     <div>
+      <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" />
       <Head>
         <title>Ronald Skinner Cardenas - Full-Stack Web Developer</title>
         <meta
@@ -157,7 +159,7 @@ import Link from "next/link";
 
 export const getStaticProps: GetStaticProps = async () => {
   console.log("getStaticProps Was Called at ", new Date().toLocaleString());
-  
+
   storyblok();
   let storyblokApi = getStoryblokApi();
   let skillsData = await storyblokApi.get("cdn/stories", {
