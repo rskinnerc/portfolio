@@ -47,11 +47,6 @@ const About = () => {
             dogs are my favorites. I enjoy learning new things and teaching them
             to others.{" "}
           </p>
-          <Link href="/about">
-            <a className="font-exo animate-pulse text-fuchsia-600">
-              Want to know me more?
-            </a>
-          </Link>
           <div className="flex items-center justify-center my-10 gap-4">
             <a
               href="https://www.linkedin.com/in/rskinnerc/"
