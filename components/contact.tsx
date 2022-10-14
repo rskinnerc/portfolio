@@ -40,7 +40,10 @@ const Contact = () => {
               .required("Required"),
           })}
           onSubmit={async (values, { setSubmitting, resetForm }) => {
-            values.token = document.querySelector("input[name='cf-turnstile-response']")!.getAttribute("value") || "";
+            values.token =
+              document
+                .querySelector("input[name='cf-turnstile-response']")!
+                .getAttribute("value") || "";
             const res = await fetch("/api/notifyContact", {
               method: "POST",
               headers: {
@@ -93,7 +96,13 @@ const Contact = () => {
                 name="message"
                 component="div"
               />
-              <div className="cf-turnstile" data-sitekey="0x4AAAAAAAA3GKxhhTsa_Pha"></div>
+              <div className="p-2 border rounded-md border-orange-600/30 items-start w-fit">
+                <p className="text-sm text-orange-600 font-ibm mb-2">Are you human?</p>
+                <div
+                  className="cf-turnstile"
+                  data-sitekey="0x4AAAAAAAA3GKxhhTsa_Pha"
+                ></div>
+              </div>
               <button
                 type="submit"
                 disabled={form.isSubmitting}

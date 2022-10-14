@@ -167,6 +167,7 @@ export const getStaticProps: GetStaticProps = async () => {
     per_page: 100,
     version: "published",
     starts_with: "skills/",
+    cv: Date.now(),
   });
 
   let projects = await storyblokApi.get("cdn/stories", {
@@ -174,6 +175,7 @@ export const getStaticProps: GetStaticProps = async () => {
     per_page: 100,
     version: "published",
     starts_with: "projects/",
+    cv: Date.now(),
   });
 
   let skills = skillsData.data.stories.map((skill: any) => {
