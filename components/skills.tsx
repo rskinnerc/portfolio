@@ -1,4 +1,7 @@
 import Image from "next/future/image";
+import softSkills from "../public/soft-skills.svg";
+import frontendSkills from "../public/front-end.svg";
+import backendSkills from "../public/back-end.svg";
 
 const Skills = (props: any) => {
   const frontend = props.skills.filter(
@@ -22,7 +25,7 @@ const Skills = (props: any) => {
       <div className="my-10 flex flex-col gap-4 md:flex-row md:gap-1 md:items-center md:w-10/12 xl:w-8/12 md:mx-auto">
         <div className="bg-white rounded-xl shadow py-3 px-4 md:px-2 group md:w-1/3 m-2 shadow-fuchsia-600/10 hover:shadow-md hover:transform hover:scale-105 transition-all">
           <Image
-            src="/soft-skills.svg"
+            src={softSkills}
             width={88}
             height={88}
             className="drop-shadow-lg mx-auto mt-6 opacity-50"
@@ -51,7 +54,7 @@ const Skills = (props: any) => {
         </div>
         <div className="bg-white rounded-xl shadow py-3 px-4 md:px-2 group md:w-1/3 m-2 shadow-fuchsia-600/10 hover:shadow-md hover:transform hover:scale-105 transition-all">
           <Image
-            src="/front-end.svg"
+            src={frontendSkills}
             width={88}
             height={88}
             className="drop-shadow-lg mx-auto mt-6 opacity-50"
@@ -81,7 +84,7 @@ const Skills = (props: any) => {
         </div>
         <div className="bg-white rounded-xl shadow py-3 px-4 md:px-2 group md:w-1/3 m-2 shadow-fuchsia-600/10 hover:shadow-md hover:transform hover:scale-105 transition-all">
           <Image
-            src="/back-end.svg"
+            src={backendSkills}
             width={88}
             height={88}
             className="drop-shadow-lg mx-auto mt-6 opacity-50"

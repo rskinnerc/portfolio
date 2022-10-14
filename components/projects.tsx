@@ -4,7 +4,6 @@ import { hideDetails } from "../store/project";
 import ProjectCard from "./projectCard";
 import { MdDragHandle } from "react-icons/md";
 import Image from "next/future/image";
-import Link from "next/link";
 import { IoLogoGithub, IoRocket } from "react-icons/io5";
 import { useEffect, useState } from "react";
 
