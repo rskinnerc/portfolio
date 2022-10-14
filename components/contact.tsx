@@ -25,7 +25,7 @@ const Contact = () => {
       </p>
       {!messageSent && (
         <Formik
-          initialValues={{ name: "", email: "", message: "" }}
+          initialValues={{ name: "", email: "", message: "", token: "" }}
           validationSchema={Yup.object({
             name: Yup.string()
               .min(2, "Must be 2 characters or more")
@@ -40,6 +40,7 @@ const Contact = () => {
               .required("Required"),
           })}
           onSubmit={async (values, { setSubmitting, resetForm }) => {
+            values.token = document.querySelector("input[name='cf-turnstile-response']")!.getAttribute("value") || "";
             const res = await fetch("/api/notifyContact", {
               method: "POST",
               headers: {
@@ -92,6 +93,7 @@ const Contact = () => {
                 name="message"
                 component="div"
               />
+              <div className="cf-turnstile" data-sitekey="0x4AAAAAAAA3GKxhhTsa_Pha"></div>
               <button
                 type="submit"
                 disabled={form.isSubmitting}
