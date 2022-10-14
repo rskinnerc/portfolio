@@ -1,5 +1,5 @@
 import Image from "next/future/image";
-import Link from "next/link";
+import photo from "../public/photo.jpeg";
 import {
   IoLogoLinkedin,
   IoLogoGithub,
@@ -23,7 +23,7 @@ const About = () => {
         <div className="rounded-full border-4 border-sky-600/40 w-fit mx-auto p-0 h-fit">
           <div className="rounded-full border-4 border-fuchsia-600/30 w-fit mx-auto p-0.5">
             <Image
-              src="/photo.jpeg"
+              src={photo}
               width={300}
               height={300}
               alt="Ronald's Profile"

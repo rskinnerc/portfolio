@@ -7,6 +7,7 @@ import Skills from "../components/skills";
 import Navbar from "../components/navbar";
 import Image from "next/future/image";
 import landindBg from "../public/heading-bg.png";
+import logo from "../public/logo-min.png";
 import {
   IoLogoLinkedin,
   IoLogoGithub,
@@ -67,7 +68,7 @@ const Home: NextPage = (props: any) => {
           <div className="flex flex-col md:flex-row md:items-start md:gap-11 md:w-11/12 xl:w-10/12 mx-auto">
             <div className="md:w-1/3">
               <Image
-                src="/logo-min.png"
+                src={logo}
                 width={340}
                 height={232}
                 className="w-24 mx-auto drop-shadow-lg"

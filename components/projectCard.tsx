@@ -1,5 +1,4 @@
 import Image from "next/future/image";
-import { useRef } from "react";
 import { RiLightbulbFill } from "react-icons/ri";
 import { useDispatch } from "react-redux";
 import { showDetails } from "../store/project";

@@ -3,6 +3,7 @@ import { TbLayoutSidebarLeftCollapse } from "react-icons/tb";
 import { IoMenu } from "react-icons/io5";
 import Image from "next/future/image";
 import { useEffect, useState } from "react";
+import logo from "../public/logo-min.png";
 
 const Navbar = () => {
   const [sections] = useState([
@@ -82,7 +83,7 @@ const Navbar = () => {
         }
       >
         <Image
-          src="/logo-min.png"
+          src={logo}
           width={340}
           height={232}
           className="w-24 my-6 drop-shadow-lg"
