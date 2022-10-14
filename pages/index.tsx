@@ -155,6 +155,8 @@ import getStoryblokApi, { storyblok } from "../lib/storyblok";
 import Link from "next/link";
 
 export const getStaticProps: GetStaticProps = async () => {
+  console.log("getStaticProps Was Called at ", new Date().toLocaleString());
+  
   storyblok();
   let storyblokApi = getStoryblokApi();
   let skillsData = await storyblokApi.get("cdn/stories", {
