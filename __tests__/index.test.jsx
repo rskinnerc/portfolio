@@ -17,7 +17,7 @@ describe("the home page", () => {
     render(HomeComponent);
     expect(screen.getByText("I'm", { exact: false })).toBeInTheDocument();
     expect(
-      screen.getByText("Ronald Skinner", { exact: false })
+      screen.getByText("RONALD SKINNER")
     ).toBeInTheDocument();
     expect(screen.getByText("Full-Stack Web Developer")).toBeInTheDocument();
   });

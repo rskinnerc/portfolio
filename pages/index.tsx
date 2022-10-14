@@ -140,7 +140,9 @@ const Home: NextPage = (props: any) => {
               </ul>
             </div>
           </div>
-          <p className="text-center font-exo text-slate-600 italic mt-20">Copyright &copy; 2022 Ronald Skinner Cardenas - Full-Stack Developer</p>
+          <p className="text-center font-exo text-slate-600 italic mt-20">
+            Copyright &copy; 2022 Ronald Skinner Cardenas - Full-Stack Developer
+          </p>
         </footer>
       </main>
     </div>
@@ -165,7 +167,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   let projects = await storyblokApi.get("cdn/stories", {
     page: 1,
-    per_page: 3,
+    per_page: 100,
     version: "published",
     starts_with: "projects/",
     cv: 1,
@@ -184,5 +186,6 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: { skills, projects },
+    revalidate: 300,
   };
 };
