@@ -2,9 +2,8 @@ import classNames from "classnames";
 import { useDispatch, useSelector } from "react-redux";
 import { hideDetails } from "../store/project";
 import ProjectCard from "./projectCard";
-import { MdDragHandle } from "react-icons/md";
 import Image from "next/future/image";
-import { IoLogoGithub, IoRocket } from "react-icons/io5";
+import { IoLogoGithub, IoRocket, IoCaretDown } from "react-icons/io5";
 import { useEffect, useState } from "react";
 
 const Projects = (props: any) => {
@@ -62,14 +61,14 @@ const Projects = (props: any) => {
         id="project-details"
         onClick={() => dispatch(hideDetails())}
         className={
-          "h-72 md:h-68 w-full z-40 fixed bottom-0 text-white from-slate-800 to-slate-600 bg-gradient-to-tr rounded-t-xl shadow-md translate transition-transform p-2 md:p-6 md:w-10/12 lg:w-8/12 md:left-1/2 md:-translate-x-1/2 " +
+          "w-full z-40 fixed bottom-0 text-white from-slate-800 to-slate-600 bg-gradient-to-tr rounded-t-xl shadow-md translate transition-transform p-2 md:p-6 md:w-10/12 lg:w-8/12 md:left-1/2 md:-translate-x-1/2 " +
           detailsClasses
         }
       >
         {project && (
           <>
             <span className="flex justify-center text-xl cursor-pointer">
-              <MdDragHandle />
+              <IoCaretDown className="animate-bounce text-sky-50" />
             </span>
             <h3 className="text-fuchsia-600 font-bold font-ibm flex items-center gap-5 my-3 justify-between">
               {project.name}

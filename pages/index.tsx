@@ -129,7 +129,7 @@ const Home: NextPage = (props: any) => {
                 Latest Projects
               </h3>
               <ul>
-                {props.projects.map((project: any) => {
+                {props.projects.slice(0, 3).map((project: any) => {
                   return (
                     <li
                       key={project._uid}
