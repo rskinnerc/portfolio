@@ -19,16 +19,19 @@ export default async function handler(
     formData.set("response", req.body.token);
     formData.set("remoteip", ip!);
 
-    const url = "https://challenges.cloudflare.com/turnstile/v0/siteverify";
-    const result = await fetch(url, {
-      body: formData,
-      method: "POST",
-    });
+    // CloudFlare Turnstile removed temporary. 
+    // const url = "https://challenges.cloudflare.com/turnstile/v0/siteverify";
+    // const result = await fetch(url, {
+    //   body: formData,
+    //   method: "POST",
+    // });
 
-    const verified: any = await result.json();
-    if (!verified.success) {
-      throw new Error("Failed to verify");
-    }
+    // const verified: any = await result.json();
+    // console.log(verified);
+    
+    // if (!verified.success) {
+    //   throw new Error("Failed to verify");
+    // }
 
     await fetch(
       `https://api.telegram.org/bot${process.env.TELEGRAM_TOKEN}/sendMessage`,

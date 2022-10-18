@@ -5,6 +5,8 @@ import { FaTelegramPlane } from "react-icons/fa";
 
 const Contact = () => {
   const [messageSent, setMessageSent] = useState(false);
+  console.log("Updated");
+  
 
   return (
     <section
@@ -96,13 +98,13 @@ const Contact = () => {
                 name="message"
                 component="div"
               />
-              <div className="p-2 border rounded-md border-orange-600/30 items-start w-fit">
+              {/* <div className="p-2 border rounded-md border-orange-600/30 items-start w-fit">
                 <p className="text-sm text-orange-600 font-ibm mb-2">Are you human?</p>
                 <div
                   className="cf-turnstile"
                   data-sitekey="0x4AAAAAAAA3GKxhhTsa_Pha"
                 ></div>
-              </div>
+              </div> */}
               <button
                 type="submit"
                 disabled={form.isSubmitting}
