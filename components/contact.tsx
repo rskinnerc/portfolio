@@ -42,10 +42,10 @@ const Contact = () => {
               .required("Required"),
           })}
           onSubmit={async (values, { setSubmitting, resetForm }) => {
-            values.token =
-              document
-                .querySelector("input[name='cf-turnstile-response']")!
-                .getAttribute("value") || "";
+            // values.token =
+            //   document
+            //     .querySelector("input[name='cf-turnstile-response']")!
+            //     .getAttribute("value") || "";
             const res = await fetch("/api/notifyContact", {
               method: "POST",
               headers: {
