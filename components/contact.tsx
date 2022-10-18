@@ -5,8 +5,6 @@ import { FaTelegramPlane } from "react-icons/fa";
 
 const Contact = () => {
   const [messageSent, setMessageSent] = useState(false);
-  console.log("Updated");
-  
 
   return (
     <section
