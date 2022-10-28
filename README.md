@@ -1,34 +1,77 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![](https://rskinner.cyou/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-min.1f16a855.png&w=384&q=75)
+
+# Ronald Skinner's Portfolio
+
+> This is my professional portfolio built using Vercel's #NextJS framework, pulling some data (skills/projects) from Storyblok and rendering the output using this fantastic feature Nextjs offers us, incremental static regeneration (ISR). I deployed it on Netlify which handles Nextjs apps seamlessly with its brand-new runtime. Last but not least, I'm protecting my contact form with the new Cloudflare's #Turnstile service, a nicely integrated smart CAPTCHA alternative.
+
+
+## Built With
+
+- NextJS
+- TailwindCSS
+- Storyblok
+- Testing Library
+- Redux / Redux Toolkit
+- Firebase SDK
+- Firespot (My own open-source npm package)
+- Formik
+
+## Live Demo
+
+[Ronald Skinner's Portfolio](https://rskinner.cyou)
+
 
 ## Getting Started
 
-First, run the development server:
+To get a local copy up and running follow these simple example steps.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+### Prerequisites
+- You must have node / npm installed
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Setup
+- Clone this respository in your local machine: `git clone git@github.com:rskinnerc/portfolio.git`
+- Move to the created folder `cd portfolio` which is the root folder
+- In order to use Firebase and initialize a Firebase App, you must provide the required values in the .env file (For development use a .env.local which should be git ignored)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### Install
+- Install the dependencies using `npm install`
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### Usage
+- Start the development server with `npm run dev`
+- In your browser, navigate to `http://localhost:3000`
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Run tests
+- You can run the tests with `npm test`
 
-## Learn More
+### Deployment
+- It depends where you wan to deploy your code, I strongly suggest Netlify which supports NextJS's SSR features
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Authors
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+👤 **Author1**
 
-## Deploy on Vercel
+- GitHub: [@rskinnerc](https://github.com/rskinnerc)
+- Twitter: [@XSkinner](https://twitter.com/XSkinner)
+- LinkedIn: [Ronald Skinner's LinkedIn](https://linkedin.com/in/rskinnerc)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🤝 Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+
+## 📝 Copyrights
+
+This project, its code, assets and documentation are copyrighted by Ronald Skinner Cardenas. All rights reserved. 2022
+
+
